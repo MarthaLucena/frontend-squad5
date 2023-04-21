@@ -1,5 +1,6 @@
 import Bairros from "../Bairros";
 import Cards from "../Cards";
+import Mapa from "../Mapa";
 import "./Parallax.css";
 
 const MyParallax = () => {
@@ -8,6 +9,7 @@ const MyParallax = () => {
       <div className="module parallax parallax-1">
         <Cards />
         <Bairros />
+        <Mapa />
       </div>
     </main>
   );
