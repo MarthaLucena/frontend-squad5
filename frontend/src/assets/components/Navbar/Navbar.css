@@ -49,6 +49,12 @@ header .nav-btn {
     color: #ffff;
 }
 
+.active-link {
+	border-top: 4px solid var(--detaisYellow);
+	padding: 10px 5px;
+  }
+  
+
 header div,
 nav {
 	display: flex;
@@ -65,6 +71,7 @@ ul.nav-ul {
 	align-items: center;
     color:#FFFF;
 }
+
 
 h3 {
     color:#FFFF;

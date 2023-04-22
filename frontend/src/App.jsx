@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
-import Banner from './assets/components/Banner/Banner'
-import Navbar from './assets/components/Navbar/Navbar'
-import Home from './pages/Home'
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import Banner from "./assets/components/Banner/Banner";
+import Navbar from "./assets/components/Navbar/Navbar";
+import Home from "./pages/Home/Home";
 
 /* ===== Imports estão comentados para não dar erro. Ao inserir os componentes nas pages, tira o comentário do import!
 
@@ -12,17 +12,16 @@ import Projetos from './pages/Projetos.jsx'
 import Sobre from './pages/Sobre.jsx' 
 import Login from './pages/Login.jsx'
 */
-  function app () {
+function app() {
   return (
     <div className="App">
       <Router>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-          
-        </Route>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
 
-{/* ===== As rotas relacionadas as imports de cima também estão comentadas para evitar erro.
+          {/* ===== As rotas relacionadas as imports de cima também estão comentadas para evitar erro.
           Conforme as Pages forem configuradas, tirar o comentário
 
         <Route path="/comunidades">
@@ -54,14 +53,13 @@ import Login from './pages/Login.jsx'
         </Route>
         */}
 
-
-      <Navbar />
-      <Banner />
-      
-      </Switch>
+          {/* <Navbar />
+          <Banner /> */}
+          
+        </Switch>
       </Router>
     </div>
-  )
-  }
+  );
+}
 
-export default app
+export default app;

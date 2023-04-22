@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+}
+
+footer{
+  color: #fff;
+  background-color: #676666;
+}
+
+footer > h1 {
+  font-family: 'Germania One', cursive;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.box-footer{
+  display: flex;
+  justify-content: space-around;
+}
+
+div > .box-collum {
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+}
+
+div > h2 {
+  padding-bottom: 20px;
+  font-family: 'Germania One', cursive;
+}
+
+div > ul > a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.icon{
+  font-size: 40px;
+  padding: 5px;
+}
+
+.box-copy{
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+  background-color: #2e2e2e;
+}

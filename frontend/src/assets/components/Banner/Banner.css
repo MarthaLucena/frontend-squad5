@@ -32,7 +32,6 @@ section.module.parallax:after {
 
 }
 
-
 section.module.parallax-1::before {
     content: "";
     position: absolute;
