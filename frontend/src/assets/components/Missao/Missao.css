@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.miss{
+    padding: 15px;
+    background-color: whitesmoke;
+}
+.miss p{
+    font-size: 30px;
+}
+.miss h1{
+    font-size: 70px;
+    color: gray;
+}
+.missao{
+    width: 51%;
+    padding-top: 10px;
+}
+
+.iconM{
+    color: goldenrod;
+    font-size: 70PX;
+}
+.icon2{
+    color: gold;
+}
