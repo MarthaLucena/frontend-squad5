@@ -1,0 +1,27 @@
+.box-portal {
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  width: 600px;
+  margin-top: 100px;
+  margin-bottom: 80px;
+}
+
+.titulo{
+  display: contents;
+}
+
+.box-outros > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.box-form > fieldset {
+  display: flex;
+  flex-direction: column;
+  line-height: 20px;
+  padding: 20px;
+}

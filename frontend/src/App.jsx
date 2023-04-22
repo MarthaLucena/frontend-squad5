@@ -2,7 +2,8 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Banner from "./assets/components/Banner/Banner";
 import Navbar from "./assets/components/Navbar/Navbar";
 import Home from "./pages/Home";
-import Sobre from "./pages/Sobre.jsx";
+import Sobre from "./pages/Sobre";
+import Contato from "./pages/Contato"
 
 /* ===== Imports estão comentados para não dar erro. Ao inserir os componentes nas pages, tira o comentário do import!
 
@@ -26,15 +27,15 @@ function app() {
             <Sobre />
           </Route>
 
+          <Route path="/contato">
+            <Contato />
+          </Route>
+
           {/* ===== As rotas relacionadas as imports de cima também estão comentadas para evitar erro.
           Conforme as Pages forem configuradas, tirar o comentário
 
         <Route path="/comunidades">
           <Comunidades />
-        </Route>
-
-        <Route path="/contato">
-          <Contato />
         </Route>
 
         <Route path="/impactosocial">
@@ -55,7 +56,6 @@ function app() {
           <Login />
         </Route>
         */}
-
         </Switch>
       </Router>
     </div>

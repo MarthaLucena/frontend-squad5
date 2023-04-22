@@ -1,21 +1,15 @@
-/*
+import Navbar from "../assets/components/Navbar/Navbar";
+import Footer from "../assets/components/Footer/Footer";
+import Portal from "../assets/components/Contatos/Portal"
 
-import Banner from "../assets/components/Banner/Banner"
-import Navbar from "../assets/components/Navbar/Navbar"
-import Footer from "../assets/components/Footer/Footer"
-
-function Contato () {
-    return(
-        <div>
-        <Navbar />
-        <Banner />
-
-        
-        <Footer />
-
-        </div>
-    )
-    
+function Contato() {
+  return (
+    <main>
+      <Navbar />
+      <Portal/>
+      <Footer />
+    </main>
+  );
 }
 
-export default Contato */
+export default Contato;
