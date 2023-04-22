@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.quem{
+    padding: 15px;
+    background-color: whitesmoke;
+}
+.quem p{
+    font-size: 30px;
+}
+.quem h1{
+    font-size: 70px;
+    color: gray;
+}
+.quemsomos{
+    width: 51%;
+}
+
+.iconH{
+    color: goldenrod;
+    font-size: 70PX;
+}
+.imgH img{
+    height: 100px;
+    width: 100px;
+}
