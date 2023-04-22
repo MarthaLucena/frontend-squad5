@@ -1,6 +1,6 @@
 import Bairros from "../Bairros";
 import "../Banner/Banner.css";
-import Cards from "../Cards";
+import Cards from "../CardNoticia/Cards";
 
 const Banner = () => {
   return (

@@ -1,5 +1,5 @@
 import Bairros from "../Bairros";
-import Cards from "../Cards";
+import Cards from "../CardNoticia/Cards";
 import Mapa from "../Mapa";
 import "./Parallax.css";
 

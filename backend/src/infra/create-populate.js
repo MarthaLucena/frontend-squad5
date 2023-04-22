@@ -176,7 +176,7 @@ CREATE TABLE IF NOT EXISTS "NOTICIAS" (
 
 const ADD_NOTICIAS_DATA = `
 INSERT INTO NOTICIAS (GENERO, TITULO, SUBTITULO, ARTIGO, AUTOR, DATA, HORA)
-VALUES ( 'EDUCAÇÃO' , 'ENSINO MÉDIO' , 'REFORMA', 'Lorem' , 'Kaio Melo', '19/04/2023', '00:00:00')
+VALUES ( 'Educação' , 'Ensino Médio' , 'Reforma', 'Lorem' , 'Kaio Melo', '19/04/2023', '00:00:00')
 `
 
 function criaTabelaNoticias() {
