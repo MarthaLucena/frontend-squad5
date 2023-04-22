@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Banner from "./assets/components/Banner/Banner";
 import Navbar from "./assets/components/Navbar/Navbar";
-import Home from "./pages/Home/Home";
-import Sobre from "./pages/Sobre/Sobre.jsx";
+import Home from "./pages/Home";
+import Sobre from "./pages/Sobre.jsx";
 
 /* ===== Imports estão comentados para não dar erro. Ao inserir os componentes nas pages, tira o comentário do import!
 
@@ -21,6 +21,7 @@ function app() {
           <Route exact path="/">
             <Home />
           </Route>
+
           <Route path="/sobre">
             <Sobre />
           </Route>
@@ -54,9 +55,6 @@ function app() {
           <Login />
         </Route>
         */}
-
-          {/* <Navbar />
-          <Banner /> */}
 
         </Switch>
       </Router>

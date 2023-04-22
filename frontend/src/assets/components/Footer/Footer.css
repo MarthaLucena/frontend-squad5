@@ -7,8 +7,11 @@ footer{
   background-color: #676666;
 }
 
-footer > h1 {
+.fonteLogo {
   font-family: 'Germania One', cursive;
+}
+
+footer > h1 {
   text-align: center;
   padding: 10px;
   margin-bottom: 30px;
@@ -27,7 +30,6 @@ div > .box-collum {
 
 div > h2 {
   padding-bottom: 20px;
-  font-family: 'Germania One', cursive;
 }
 
 div > ul > a{

@@ -18,11 +18,14 @@ function Navbar() {
 	return (
 
 		<header>
-			<Link to="/"><h3>ALÔ COMUNIDADES</h3></Link>
+			<Link to="/"><h3 className="fonteLogo">ALÔ COMUNIDADES</h3></Link>
 			<nav ref={navRef} >
 				<ul className="nav-ul">
+				<li>
+						<Link to="/" onClick={() => { showNavbar(); setActiveLink("home") }} className={activeLink === "home" ? "active-link" : ""}>HOME</Link>
+					</li>
 					<li>
-						<Link to="/sobre" onClick={() => { showNavbar(); setActiveLink("home") }} className={activeLink === "home" ? "active-link" : ""}>QUEM SOMOS</Link>
+						<Link to="/sobre" onClick={() => { showNavbar(); setActiveLink("sobre") }} className={activeLink === "sobre" ? "active-link" : ""}>QUEM SOMOS</Link>
 					</li>
 					<li>
 						<Link to="/comunidades" onClick={() => { showNavbar(); setActiveLink("comunidades") }} className={activeLink === "comunidades" ? "active-link" : ""}>COMUNIDADES</Link>

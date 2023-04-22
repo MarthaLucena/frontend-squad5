@@ -4,10 +4,10 @@ import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 function Footer() {
   return (
     <footer>
-      <h1>Alô Comunidades</h1>
+      <h1 className="fonteLogo">Alô Comunidades</h1>
       <div className="box-footer">
         <div>
-          <h2>Nossa Filosofia</h2>
+          <h2 className="fonteLogo">Nossa Filosofia</h2>
           <ul className="box-collum">
             <a href="">Seja nosso parceiro</a>
             <a href="">Faça sua doação</a>
@@ -16,7 +16,7 @@ function Footer() {
           </ul>
         </div>
         <div>
-          <h2>Sobre Nós</h2>
+          <h2 className="fonteLogo">Sobre Nós</h2>
           <ul className="box-collum">
             <a href="">Sobre</a>
             <a href="">Impacto social</a>
@@ -25,7 +25,7 @@ function Footer() {
           </ul>
         </div>
         <div>
-          <h2>Nossas Redes</h2>
+          <h2 className="fonteLogo">Nossas Redes</h2>
           <ul>
             <i className="icon"><FaFacebook/></i>
             <i className="icon"><FaTwitter/></i>
@@ -33,7 +33,7 @@ function Footer() {
           </ul>
         </div>
         <div>
-          <h2>Nossos Parceiros</h2>
+          <h2 className="fonteLogo">Nossos Parceiros</h2>
           <ul>
             <a href="">Prefeitura do RIO</a>
             <a href="">Senac RIO</a>
