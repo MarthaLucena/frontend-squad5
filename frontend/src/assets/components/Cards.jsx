@@ -1,20 +1,9 @@
 import { FaTwitter, FaFacebook } from "react-icons/fa";
-import { useState, useEffect } from "react";
 import "../components/Cards.css";
-import axios from 'axios'
 
 
 function Cards() {
-  const [noticias, setNoticias] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:3000/noticia')
-      .then(response => response.json())
-      .then(data => setNoticias(data.noticias))
-      .catch(error => console.error(error));
-  }, []);
-
-  /* 
+ 
     return (
       
       <section className="container">
@@ -88,24 +77,6 @@ function Cards() {
           </div>
       </section>
     );
-  }; */
+  }; 
 
-  return (
-      <div>
-      <h1>Notícias</h1>
-      {noticias && (
-        <ul>
-          {noticias.map((noticia) => (
-            <li key={noticia.id}>
-              <h2>{noticia.titulo}</h2>
-              <p>Autor: {noticia.autor}</p>
-              <p>Data: {noticia.data}</p>
-              <p>{noticia.artigo}</p>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  )};
-  
 export default Cards;
