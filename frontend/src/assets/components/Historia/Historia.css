@@ -5,8 +5,9 @@
 .quem{
     padding: 15px;
     background-color: whitesmoke;
-    width: 51%;
-    
+    border-radius: 15px;
+    width: 50%;
+    margin-left: 70PX;
 
 }
 .quem p{
@@ -20,6 +21,8 @@
     background-color: blue;
     display: flex;
     align-items: center;
+    padding-top: 10px;
+
 }
 
 .iconH{
@@ -27,7 +30,8 @@
     font-size: 70PX;
 }
 .animacao1{
-    height: 400px;
-    width: 400px;
+    height: 700px;
+    width: 700px;
+    margin-left: 400px;
 }
 

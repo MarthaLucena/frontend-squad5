@@ -44,6 +44,8 @@
 .altofalante4 {
     height: 400px;
     width: 400px;
+    background-color: rgb(255, 218, 55);
+    border-radius: 50%;
 }
 
 .iconsmage {
