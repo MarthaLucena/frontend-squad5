@@ -1,14 +1,12 @@
 import "./Noticias.css"
-import favela2 from "../../img/favela2.jpg"
 import { AiOutlineLine } from "react-icons/ai";
-import favela4 from "../../img/favela4.jpg"
+import Lottie from "lottie-react"
+import altofalante4 from "../Lottie/altofalante4.json"
 
 const Noticias = () => {
     return (
         <section className="noticias">
-            <div className="notimg">
-                <img src={favela2} />
-            </div>
+            <Lottie className='altofalante4' animationData={altofalante4} />
             <div className="notic">
                 <h1>Notícias</h1>
                 <div className="iconN"> <AiOutlineLine /> </div>
@@ -16,9 +14,7 @@ const Noticias = () => {
                     Acreditamos que ao fornecer informações de qualidade e empoderar as pessoas com o conhecimento, podemos contribuir para a melhoria da qualidade de vida das comunidades e para o desenvolvimento sustentável da sociedade como um todo. Por isso, estamos comprometidos com a nossa missão e trabalhamos diariamente para atingir nossos objetivos e levar informação para aqueles que mais precisam.
                 </p>
             </div>
-            <div className="notimg">
-                <img src={favela4} />
-            </div>
+
         </section>
     )
 }

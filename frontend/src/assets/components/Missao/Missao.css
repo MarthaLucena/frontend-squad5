@@ -6,9 +6,8 @@
 .miss {
     background-color: whitesmoke;
     width: 75%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    margin-bottom: 30px;
+    border-radius: 30PX;
 }
 
 .miss p {
@@ -20,35 +19,23 @@
     color: gray;
 }
 
+
 .missao {
     background-color: RED;
-    padding-top: 45px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     flex-direction: column;
-
-
-}
+ }
 
 .iconM {
     color: goldenrod;
     font-size: 70PX;
 }
 
-.imgM img {
+
+.bandeira{
     width: 400px;
     height: 400px;
-    border-radius: 15PX;
-}
-
-.altofalante4 {
-    height: 400px;
-    width: 400px;
-    background-color: rgb(255, 218, 55);
-    border-radius: 50%;
-}
-
-.iconsmage {
-    display: flex;
-    justify-content: center;
 }
