@@ -27,18 +27,11 @@ function Navbar() {
 					<li>
 						<Link to="/sobre" onClick={() => { showNavbar(); setActiveLink("sobre") }} className={activeLink === "sobre" ? "active-link" : ""}>QUEM SOMOS</Link>
 					</li>
-					<li>
-						<Link to="/comunidades" onClick={() => { showNavbar(); setActiveLink("comunidades") }} className={activeLink === "comunidades" ? "active-link" : ""}>COMUNIDADES</Link>
-					</li>
-					<li>
-						<Link to="/projetos" onClick={() => { showNavbar(); setActiveLink("projetos") }} className={activeLink === "projetos" ? "active-link" : ""}>PROJETOS</Link>
-					</li>
+
 					<li>
 						<Link to="/noticias" onClick={() => { showNavbar(); setActiveLink("noticias") }} className={activeLink === "noticias" ? "active-link" : ""}>NOTÍCIAS</Link>
 					</li>
-					<li>
-						<Link to="/impactosocial" onClick={() => { showNavbar(); setActiveLink("impactosocial") }} className={activeLink === "impactosocial" ? "active-link" : ""}>IMPACTO SOCIAL</Link>
-					</li>
+					
 					<li>
 						<Link to="/contato" onClick={() => { showNavbar(); setActiveLink("contato") }} className={activeLink === "contato" ? "active-link" : ""}>CONTATO</Link>
 					</li>
@@ -46,7 +39,7 @@ function Navbar() {
 						<Link to="/login" onClick={() => { showNavbar(); setActiveLink("login") }} className={activeLink === "login" ? "active-link" : ""}> <FaUser />  </Link>
 					</li>
 					<li>
-						<button className="doarBtn">DOAR AGORA</button>
+					<Link to="/doe" onClick={() => { showNavbar(); setActiveLink("doe") }} className={activeLink === "login" ? "active-link" : ""}> <button className="doarBtn">DOAR AGORA</button>  </Link>
 					</li>
 				</ul>
 				<button
