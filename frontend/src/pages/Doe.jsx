@@ -4,7 +4,7 @@ import Banner from "../assets/components/Banner/Banner"
 import Navbar from "../assets/components/Navbar/Navbar"
 import Footer from "../assets/components/Footer/Footer"
 
-function ImpactoSocial () {
+function Noticias () {
     return(
         <div>
 <Navbar />
@@ -15,4 +15,4 @@ function ImpactoSocial () {
     
 }
 
-export default ImpactoSocial */
+export default Noticias */
