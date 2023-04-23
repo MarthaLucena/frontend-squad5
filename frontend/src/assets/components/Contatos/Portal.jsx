@@ -3,13 +3,16 @@ import "./Portal.css";
 
 export default function Portal() {
   return (
-    <section className="box-portal">
-      
-        <div className="titulo">
-          <h1>Portal de Reclamações</h1>
-        </div>
-        <aside className="box-outros">
-          <h2 className="subtitulo">Siga nossas redes</h2>
+    <section className="contente">
+      <div className="titulo-form">
+        <h1>Portal de Reclamações</h1>
+        <div className="linha_horizontal"></div>
+      </div>
+      <div className="box-form">
+        <div className="box-outros">
+          <div className="subtitulo-form">
+            <h2>Siga nossas redes</h2>
+          </div>
           <ul>
             <i className="icon">
               <FaFacebook />
@@ -21,19 +24,21 @@ export default function Portal() {
               <FaInstagram />
             </i>
           </ul>
-        </aside>
-        <form className="box-form">
-          <h2 className="subtitulo">Contate-nos</h2>
-          <fieldset className="form">
+        </div>
+        <form className="form">
+          <div className="subtitulo-form">
+            <h2>CONTATE-NOS</h2>
+          </div>
+          <div className="form-box">
             <input type="text" placeholder="Nome" />
             <input type="text" placeholder="Sobrenome" />
             <input type="text" placeholder="E-mail" />
             <textarea
               placeholder="Digite sua mensagem..."
               cols="30"
-              rows="10"
+              rows="9"
             ></textarea>
-            <div>
+            <div className="conceito">
               <label>Ruim</label>
               <input type="checkbox" placeholder="Ruim" />
               <label>Razoável</label>
@@ -43,10 +48,12 @@ export default function Portal() {
               <label>Ótimo</label>
               <input type="checkbox" placeholder="Ótimo" />
             </div>
-            <button type="submit">Enviar</button>
-          </fieldset>
+            <div className="button-form">
+              <button type="submit">Enviar</button>
+            </div>
+          </div>
         </form>
-      
+      </div>
     </section>
   );
 }

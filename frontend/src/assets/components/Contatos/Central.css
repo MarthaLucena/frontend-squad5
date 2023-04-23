@@ -1,0 +1,39 @@
+.contente {
+  margin: auto;
+  width: 800px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.titulo-central{
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+}
+
+.linha_horizontal{
+  width: 500px;
+  border: 1px solid #efc900;
+  margin: auto;
+}
+
+.box-central{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #cdcece;
+  padding: 30px;
+}
+
+.linha_vertical {
+  height: 250px;
+  border-right: 1px solid #000000;
+}
+
+.box > address{
+  padding: 5px;
+}
+
+.box > h2 {
+  margin-top: 10px;
+}

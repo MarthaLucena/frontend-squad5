@@ -1,16 +1,26 @@
-.box-portal {
-  background-color: cadetblue;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.contente {
   margin: auto;
-  width: 600px;
-  margin-top: 100px;
-  margin-bottom: 80px;
+  width: 800px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.titulo{
-  display: contents;
+.titulo-form {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+}
+
+.box-form {
+  background-color: #cdcece;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.box-outros {
+  padding-top: 50px;
 }
 
 .box-outros > ul {
@@ -19,9 +29,46 @@
   justify-content: center;
 }
 
-.box-form > fieldset {
+.form {
+  background-color: #fff;
+  padding: 20px;
+  width: 400px;
+}
+
+.form > .form-box {
   display: flex;
   flex-direction: column;
-  line-height: 20px;
-  padding: 20px;
+}
+
+.form-box > input,
+textarea,
+button,
+label {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 20px;
+}
+
+.form-box > input,
+textarea,
+button{
+  padding: 8px;
+}
+
+.form-box > input,
+textarea {
+  background-color: #cdcece;
+}
+
+.conceito {
+  margin: auto;
+  padding: 5px;
+}
+
+.button-form > button {
+  background-color: #efc900;
+  padding: 5px;
+  width: 80px;
 }
