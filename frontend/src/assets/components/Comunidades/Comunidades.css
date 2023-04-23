@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.comunidades{
+    padding: 150px;
+    background-color: rgb(140, 14, 243);
+    justify-content: center;
+    align-items: center;
+    display: flex
+}
+.comun {
+    background-color: whitesmoke;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.comun p {
+    font-size: 25px;
+}
+
+.comun h1 {
+    font-size: 70px;
+    color: gray;
+}
+.iconC{
+    color: goldenrod;
+    font-size: 70px;
+}

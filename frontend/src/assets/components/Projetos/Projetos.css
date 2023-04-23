@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.projetos{
+    padding: 150px;
+    background-color: crimson;
+    justify-content: center;
+    align-items: center;
+    display: flex
+}
+.proj {
+    background-color: whitesmoke;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.proj p {
+    font-size: 25px;
+}
+
+.proj h1 {
+    font-size: 70px;
+    color: gray;
+}
+.iconP{
+    color: goldenrod;
+    font-size: 70px;
+}
