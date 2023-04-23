@@ -3,7 +3,8 @@ import Banner from "./assets/components/Banner/Banner";
 import Navbar from "./assets/components/Navbar/Navbar";
 import Home from "./pages/Home";
 import Sobre from "./pages/Sobre";
-import Contato from "./pages/Contato"
+import Contato from "./pages/Contato";
+import Noticias from "./pages/Noticias";
 
 /* ===== Imports estão comentados para não dar erro. Ao inserir os componentes nas pages, tira o comentário do import!
 
@@ -31,27 +32,14 @@ function app() {
             <Contato />
           </Route>
 
+          <Route path="/noticias">
+            <Noticias />
+          </Route>
+
           {/* ===== As rotas relacionadas as imports de cima também estão comentadas para evitar erro.
           Conforme as Pages forem configuradas, tirar o comentário
 
-        <Route path="/comunidades">
-          <Comunidades />
-        </Route>
-
-        <Route path="/impactosocial">
-          <ImpactoSocial />
-        </Route>
-        
-        <Route path="/noticias">
-          <Noticias />
-        </Route>
-
-        <Route path="/projetos">
-          <Projetos />
-        </Route>
-
-    
-        
+ 
         <Route path="/login">
           <Login />
         </Route>

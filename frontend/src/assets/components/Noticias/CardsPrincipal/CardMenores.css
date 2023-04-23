@@ -1,0 +1,17 @@
+.box__small{
+  display: inline-block;
+  position: relative;
+}
+
+.box__small > img{
+  width: 360px;
+  height: 220px;
+}
+
+.box__small > h3 {
+  position: absolute;
+  top: 120px;
+  right: 250px;
+  font-size: 32px;
+  color: rgb(248, 247, 247);
+}
