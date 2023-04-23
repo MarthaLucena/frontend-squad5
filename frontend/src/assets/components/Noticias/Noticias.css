@@ -1,23 +1,37 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.notimg img{
+
+.altofalante4 {
     height: 400px;
     width: 400px;
+    background-color: rgb(255, 218, 55);
+    border-radius: 50%;
+    margin-top: 45px;
 }
-.noticias{
-    padding: 150px;
+
+.noticias {
     background-color: yellow;
     display: flex;
+    justify-content:space-around;
+
+    
+
 }
+
 .notic {
     background-color: whitesmoke;
-    width: 75%;
+    width: 50%;
+    margin-bottom: 45px;
+    margin-top: 45px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-}
+    padding: 15px;
+    border-radius: 30px;
+    
+ }
 
 .notic p {
     font-size: 25px;
