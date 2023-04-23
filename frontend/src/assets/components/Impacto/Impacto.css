@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.impacto{
+    padding: 150px;
+    background-color: pink;
+    justify-content: center;
+    align-items: center;
+    display: flex
+}
+.impac {
+    background-color: whitesmoke;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.impac p {
+    font-size: 25px;
+}
+
+.impac h1 {
+    font-size: 70px;
+    color: gray;
+}
+.iconI{
+    color: goldenrod;
+    font-size: 70px;
+}
+

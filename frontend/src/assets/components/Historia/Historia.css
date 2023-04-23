@@ -5,6 +5,9 @@
 .quem{
     padding: 15px;
     background-color: whitesmoke;
+    width: 51%;
+    
+
 }
 .quem p{
     font-size: 30px;
@@ -14,14 +17,17 @@
     color: gray;
 }
 .quemsomos{
-    width: 51%;
+    background-color: blue;
+    display: flex;
+    align-items: center;
 }
 
 .iconH{
     color: goldenrod;
     font-size: 70PX;
 }
-.imgH img{
-    height: 100px;
-    width: 100px;
+.animacao1{
+    height: 400px;
+    width: 400px;
 }
+

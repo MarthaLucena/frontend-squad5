@@ -1,27 +1,52 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.miss{
-    padding: 15px;
+
+.miss {
     background-color: whitesmoke;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-.miss p{
-    font-size: 30px;
+
+.miss p {
+    font-size: 25px;
 }
-.miss h1{
+
+.miss h1 {
     font-size: 70px;
     color: gray;
 }
-.missao{
-    width: 51%;
-    padding-top: 10px;
+
+.missao {
+    background-color: RED;
+    padding-top: 45px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
 }
 
-.iconM{
+.iconM {
     color: goldenrod;
     font-size: 70PX;
 }
-.icon2{
-    color: gold;
+
+.imgM img {
+    width: 400px;
+    height: 400px;
+    border-radius: 15PX;
+}
+
+.altofalante4 {
+    height: 400px;
+    width: 400px;
+}
+
+.iconsmage {
+    display: flex;
+    justify-content: center;
 }
