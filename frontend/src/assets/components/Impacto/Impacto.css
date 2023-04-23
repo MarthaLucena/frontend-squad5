@@ -5,7 +5,7 @@
 
 .impacto{
     padding: 150px;
-    background-color: pink;
+    background-color: rgb(255, 255, 255);
     justify-content: center;
     align-items: center;
     display: flex
@@ -30,4 +30,8 @@
     color: goldenrod;
     font-size: 70px;
 }
+.imgI img{
+    height: 350px;
+    width: 350px;
 
+}

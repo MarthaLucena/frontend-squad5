@@ -1,9 +1,12 @@
 import "./Projetos.css";
 import { AiOutlineLine } from "react-icons/ai";
+import Lottie from "lottie-react"
+import altofalante3 from "../Lottie/altofalante3.json"
 
 const Projetos = () => {
     return (
         <section className="projetos">
+            <Lottie className='altofalante3' animationData={altofalante3} />
             <div className="proj">
                 <h1>Projetos</h1>
                 <div className="iconP"> <AiOutlineLine /> </div>
