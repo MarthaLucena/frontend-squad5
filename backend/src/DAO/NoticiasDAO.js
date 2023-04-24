@@ -57,8 +57,21 @@ class NoticiasDAO {
     });
   }
 
+  // GET - buscando por ID
   static buscarPorID(id) {
     const query = "SELECT * FROM NOTICIAS WHERE id = ?";
+    return new Promise((resolve, reject) => {
+      db.get(query, [id], (err, row) => {
+        if (err) {
+          reject(false);
+        }
+        resolve(row);
+      });
+    });
+  }
+
+  static buscarUltimoID(id) {
+    const query = "SELECT * FROM NOTICIAS WHERE id = ? ORDER BY id DESC LIMIT 1";
     return new Promise((resolve, reject) => {
       db.get(query, [id], (err, row) => {
         if (err) {

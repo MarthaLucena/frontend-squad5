@@ -1,6 +1,6 @@
 import React from "react";
 import { Table, Button, Form, Modal } from "react-bootstrap";
-import styles from "./Administrador.css";
+import "./Administrador.css";
 
 class Administrador extends React.Component {
   constructor(props) {

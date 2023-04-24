@@ -8,6 +8,7 @@ class noticiasController {
         app.get('/noticia', noticiasController.listar)
         app.post('/noticia', noticiasController.inserir)
         app.get("/noticia/id/:id", noticiasController.filtrarPorID)
+        app.get("/noticia/id/:id", noticiasController.filtrarUltimoID)
         app.delete("/noticia/id/:id", noticiasController.apagarNoticia)
         app.put("/noticia/id/:id", noticiasController.atualizarNoticia)
     }
@@ -47,6 +48,18 @@ class noticiasController {
     // GET -- BUSCAR POR ID
     static async filtrarPorID(req, res){
         const noticia = await NoticiasDAO.buscarPorID(req.params.id)
+
+        if (!noticia) {
+
+            res.status(404).send("ID não encontrado")
+        }
+
+        res.status(200).send(noticia)      
+    }
+
+    // GET -- BUSCAR POR ID
+    static async filtrarUltimoID(req, res){
+        const noticia = await NoticiasDAO.buscarUltimoID(req.params.id)
 
         if (!noticia) {
 
