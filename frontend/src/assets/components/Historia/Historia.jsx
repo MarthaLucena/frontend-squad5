@@ -1,15 +1,13 @@
 import "./Historia.css"
 import { AiOutlineLine } from "react-icons/ai";
-
-import Lottie from 'lottie-react'
-import abraco from "../Lottie/abraco.json"
+import favela2 from "../../img/favela2.jpg"
+import favela3 from "../../img/favela3.jpg"
 
 const Historia = () => {
     return (
         <section className="quemsomos">
-           
             <div className="quem">
-                <h1>Quem somos? </h1>
+                <h1>Quem somos</h1>
                 <div className="iconH">
                     <AiOutlineLine />
                 </div>
@@ -21,7 +19,15 @@ const Historia = () => {
                     Contamos com uma equipe dedicada e comprometida com a nossa missão, além de parceiros e voluntários engajados em fazer a diferença. Junte-se a nós nessa jornada!
                 </p>
             </div>
-            <Lottie className='animacao1' animationData={abraco} />    
+            <div className="imagesHis">
+                <div className="favela2">
+                    <img src={favela2} />
+                </div>
+                <div className="favela3">
+                    <img src={favela3} />
+                </div>
+            </div>
+
         </section>
     )
 }

@@ -4,33 +4,37 @@
 }
 
 .comunidades{
-    padding: 150px;
-    background-color: rgb(140, 14, 243);
-    justify-content: center;
+    background-color: white;
+    display: flex;
     align-items: center;
-    display: flex
 }
 .comun {
+    padding: 15px;
     background-color: whitesmoke;
-    width: 75%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    width: 50%;
+    margin: 0 30px 0 0;
+    border-radius: 0 30px 30px 0;
+
 }
 
 .comun p {
-    font-size: 25px;
+    font-size: 1rem;
+    margin: 0 0 0 30px;
 }
 
 .comun h1 {
-    font-size: 70px;
+    font-size: 2rem;
     color: gray;
+    margin: 0 0 0 30px;
 }
 .iconC{
     color: goldenrod;
     font-size: 70px;
+    margin: 0 0 0 20px;
 }
-.imgC img{
-    height: 400px;
+.imgCom img{
     width: 400px;
+    height: 400px;
+    margin: 0 225px;
 }
+
