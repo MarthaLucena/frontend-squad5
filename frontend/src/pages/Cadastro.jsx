@@ -1,15 +1,16 @@
 import Navbar from "../assets/components/Navbar/Navbar"
 import Footer from "../assets/components/Footer/Footer"
-import Painel from "../assets/components/Painel/Login"
+import Cadastrar from "../assets/components/Painel/Cadastro"
 
-function Login () {
+function Cadastro () {
     return(
         <div>
         <Navbar />
-        <Painel />
+        <Cadastrar />
+        <Footer />
         </div>
     )
     
 }
 
-export default Login 
+export default Cadastro

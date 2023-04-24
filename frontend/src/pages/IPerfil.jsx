@@ -1,15 +1,15 @@
+import Painel from "../assets/components/Painel/Login";
 import Navbar from "../assets/components/Navbar/Navbar"
 import Footer from "../assets/components/Footer/Footer"
-import Painel from "../assets/components/Painel/Login"
 
-function Login () {
+function IPerfil () {
     return(
         <div>
         <Navbar />
-        <Painel />
+        <Painel/>
         </div>
     )
     
 }
 
-export default Login 
+export default IPerfil
