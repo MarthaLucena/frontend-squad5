@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Sobre from "./pages/Sobre";
 import Contato from "./pages/Contato";
 import Noticias from "./pages/Noticias";
-import Doacao from "./assets/components/Doacao/Doacao";
+import Doe from "./pages/Doe";
 
 /* ===== Imports estão comentados para não dar erro. Ao inserir os componentes nas pages, tira o comentário do import!
 
@@ -38,7 +38,7 @@ function app() {
           </Route>
 
      <Route path="/doe">
-            <Doacao />
+            <Doe />
           </Route>
    
           {/* ===== As rotas relacionadas as imports de cima também estão comentadas para evitar erro.
