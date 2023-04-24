@@ -4,7 +4,7 @@
     align-items: center;
     margin: 0 auto;
     width: 80%;
-    height: fit-content;
+    height: 80vh;
 }
 
 .doarTxt{
@@ -50,7 +50,8 @@
 @media only screen and (max-width: 1024px) {
    .doarContainer{
     grid-template-columns: repeat(1, 1fr);
-    width: 100%;
+    height: fit-content;
+    padding-bottom: 20px;
    }
 }
 
