@@ -9,27 +9,27 @@ const Bairros = () => {
     {
       "titulo": "São Cristóvão",
       "descricao": "A região administrativa de São Cristóvão abrange os bairros de Benfica, Mangueira, São Cristóvão e Vasco da Gama. Se destaca por diversos motivos, como museus, Quinta da Boa Vista e a Feira de São Cristóvão.",
-      "imagem": "./src/assets/img/favela.jpg"
+      "imagem": "./src/assets/img/Bairros/saocristovao.jpg"
     },
     {
       "titulo": "Tijuca",
       "descricao": "A região administrativa da Tijuca é conhecida por abrigar o Parque Nacional da Tijuca, além dos bairros de Alto da Boa Vista, Tijuca e Praça da Bandeira.",
-      "imagem": "./src/assets/img/favela.jpg"
+      "imagem": "./src/assets/img/Bairros/tijuca.jpg"
     },
     {
       "titulo": "Vila Isabel",
       "descricao": "Com uma localização privilegiada, a região administrativa de Vila Isabel é conhecida por seus bares e restaurantes, além dos bairros de Andaraí, Grajaú, Maracanã e Vila Isabel.",
-      "imagem": "./src/assets/img/favela.jpg"
+      "imagem": "./src/assets/img/Bairros/vilaisabel.jpg"
     },
     {
       "titulo": "Ramos",
-      "descricao": "A região administrativa de Ramos abrange os bairros de Bonsucesso, Manguinhos, Olaria e Ramos. Conhecida pela Praia de Ramos, a região também conta com parques naturais.",
-      "imagem": "./src/assets/img/favela.jpg"
+      "descricao": "A região administrativa de Ramos abrange os bairros de Bonsucesso, Manguinhos, Olaria e Ramos. Conhecida pelo Piscinão de Ramos, a região também conta com parques naturais.",
+      "imagem": "./src/assets/img/Bairros/ramos.png"
     },
     {
       "titulo": "Penha",
       "descricao": "A região administrativa da Penha é conhecida por abrigar a Igreja da Penha, além dos bairros de Brás de Pina, Penha e Penha Circular. Conta com a Igreja da Penha, um importante ponto turístico da cidade.",
-      "imagem": "./src/assets/img/favela.jpg"
+      "imagem": "./src/assets/img/Bairros/penha.jpg"
     },
     {
       "titulo": "Inhaúma",
@@ -69,7 +69,7 @@ const Bairros = () => {
     {
        "titulo": "Complexo do Alemão",
        "descricao": "O Complexo do Alemão é uma das maiores favelas do Rio de Janeiro, composta por diversas comunidades como Nova Brasília, Palmeiras, Morro do Alemão, entre outras. Apesar dos problemas sociais, a região possui uma forte identidade cultural e um grande potencial turístico.",
-      "imagem": "./src/assets/img/favela.jpg"
+      "imagem": "./src/assets/img/Bairros/complexodoalemao.jpg"
     },
     {
        "titulo": "Complexo da Maré",
