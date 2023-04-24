@@ -4,8 +4,9 @@
     align-items: center;
     margin: 0 auto;
     width: 80%;
-    height: 80vh;
+    height: fit-content;
 }
+
 .doarTxt{
     display: flex;
     flex-direction: column;
@@ -43,4 +44,21 @@
     background-color: #e9ffd78f;
     padding: 5px;
     border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+   .doarContainer{
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+   }
+}
+
+@media only screen and  (max-width: 768px) {
+   
+}
+
+@media only screen and (max-width: 480px) {
+
+
 }
