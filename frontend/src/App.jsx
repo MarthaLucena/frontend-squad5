@@ -2,12 +2,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Sobre from "./pages/Sobre";
 import Contato from "./pages/Contato"
-
-import Comunidades from './pages/Comunidades.jsx'
-import ImpactoSocial from './pages/ImpactoSocial.jsx'
 import Noticias from './pages/Noticias.jsx'
-import Projetos from './pages/Projetos.jsx'
-
 import Login from './pages/Login.jsx'
 import Cadastro from "./pages/Cadastro.jsx";
 import IPerfil from "./pages/IPerfil.jsx";

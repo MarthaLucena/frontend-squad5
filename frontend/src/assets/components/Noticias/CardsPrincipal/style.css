@@ -1,0 +1,14 @@
+.card{
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+.card-title{
+  text-shadow: 0px 0px 5px black;
+}
+
+.card-text{
+  text-decoration: none;
+  color: #fff;
+}

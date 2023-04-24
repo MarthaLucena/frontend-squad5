@@ -7,7 +7,7 @@ class noticiasController {
         // Rota para o recurso notícias
         app.get('/noticia', noticiasController.listar)
         app.post('/noticia', noticiasController.inserir)
-        app.get("/noticia/:titulo", noticiasController.filtrarPorTitulo)
+        app.get("/noticia/id/:id", noticiasController.filtrarPorID)
         app.delete("/noticia/id/:id", noticiasController.apagarNoticia)
         app.put("/noticia/id/:id", noticiasController.atualizarNoticia)
     }
@@ -23,14 +23,14 @@ class noticiasController {
         const noticia = {
             genero: req.body.genero,
             titulo: req.body.titulo,
-            subtitulo: req.body.subtitulo,
             artigo: req.body.artigo,
             autor: req.body.autor,
             data: req.body.data, 
-            hora: req.body.hora
+            urlImg: req.body.urlImg,
+            urlLink: req.body.urlLink
         }
 
-        if (!noticia || !noticia.genero || !noticia.titulo || !noticia.subtitulo || !noticia.artigo || !noticia.autor || !noticia.data || !noticia.hora) {
+        if (!noticia || !noticia.genero || !noticia.titulo || !noticia.artigo || !noticia.autor || !noticia.data || !noticia.urlImg || !noticia.urlLink) {
             res.status(400).send("Precisa passar as informações")
             return
         }
@@ -44,16 +44,16 @@ class noticiasController {
         res.status(201).send({ "Mensagem": "noticia criado com sucesso", "Nova noticia: ": noticia })
     }
 
-    // GET -- BUSCAR POR TITULO
-    static async filtrarPorTitulo(req, res){
-        const noticia = await NoticiasDAO.buscarPorTitulo(req.params.titulo)
+    // GET -- BUSCAR POR ID
+    static async filtrarPorID(req, res){
+        const noticia = await NoticiasDAO.buscarPorID(req.params.id)
 
         if (!noticia) {
 
-            res.status(404).send("titulo não encontrado")
+            res.status(404).send("ID não encontrado")
         }
 
-        res.status(200).send(n)      
+        res.status(200).send(noticia)      
     }
 
     // DELETE -- Deletar notícia pelo id
@@ -86,14 +86,14 @@ class noticiasController {
         const noticia = new Noticias(
             req.body.genero,
             req.body.titulo,
-            req.body.subtitulo,
             req.body.artigo,
             req.body.autor,
             req.body.data, 
-            req.body.hora
+            req.body.urlImg, 
+            req.body.urlLink
         )
 
-        if (!noticia || !noticia.genero || !noticia.titulo || !noticia.subtitulo || !noticia.artigo || !noticia.autor || !noticia.data || !noticia.hora) {
+        if (!noticia || !noticia.genero || !noticia.titulo || !noticia.artigo || !noticia.autor || !noticia.data || !noticia.urlImg || !noticia.urlLink) {
             res.status(400).send("Precisa passar as informações")
             return
         }

@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Card_02.css";
+import "./style.css";
 
 const baseURL = "http://localhost:3000/noticia";
 
@@ -31,13 +31,12 @@ export default function CardMenores() {
           return (
             <div className="card bg-dark text-white">
               <img
-                src="./src/assets/img/favela.jpg"
+                src={value.URLIMG}
                 className="card-img"
                 alt="..."
               />
               <div className="card-img-overlay">
-                <h5 className="card-title">{value.TITULO}</h5>
-                <p className="card-text">{value.ARTIGO}</p>
+                <h3 className="card-title">{value.TITULO}</h3>
               </div>
             </div>
           );

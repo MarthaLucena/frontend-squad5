@@ -16,8 +16,8 @@ class NoticiasDAO {
 
   // POST  --  Criar uma nova notícia
   static inserir(noticia) {
-    const query = `INSERT INTO NOTICIAS (genero, titulo, subtitulo, artigo, autor, 
-          data, hora) VALUES (?, ?, ?, ?, ?, ?, ?)`;
+    const query = `INSERT INTO NOTICIAS (genero, titulo, artigo, autor, 
+          data, urlImg, urlLink) VALUES (?, ?, ?, ?, ?, ?, ?)`;
 
     return new Promise((resolve, reject) => {
       db.run(
@@ -25,11 +25,11 @@ class NoticiasDAO {
         [
           noticia.genero,
           noticia.titulo,
-          noticia.subtitulo,
           noticia.artigo,
           noticia.autor,
           noticia.data,
-          noticia.hora
+          noticia.urlImg,
+          noticia.urlLink
         ],
         (err) => {
           if (err) {
@@ -71,8 +71,8 @@ class NoticiasDAO {
 
   // PUT  -- Atualizando notícia
   static atualizar(id, noticia) {
-    const query = `UPDATE NOTICIAS SET genero = ?, titulo = ?, subtitulo = ?, artigo = ?, 
-        autor = ?, data = ?, hora = ?  WHERE id = ?`;
+    const query = `UPDATE NOTICIAS SET genero = ?, titulo = ?, artigo = ?, 
+        autor = ?, data = ?, urlImg = ?, urlLink = ? WHERE id = ?`;
 
     return new Promise((resolve, reject) => {
       db.run(
@@ -80,11 +80,11 @@ class NoticiasDAO {
         [
           noticia.genero,
           noticia.titulo,
-          noticia.subtitulo,
           noticia.artigo,
           noticia.autor,
           noticia.data,
-          noticia.hora,
+          noticia.urlImg,
+          noticia.urlLink,
           id
         ],
         (err) => {
