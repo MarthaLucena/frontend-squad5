@@ -1,12 +1,12 @@
 class Noticias {
-  constructor(genero, titulo, subtitulo, artigo, autor, data, hora){
+  constructor(genero, titulo, artigo, autor, data, urlImg, urlLink){
     this.genero = genero,
     this.titulo = titulo,
-    this.subtitulo = subtitulo,
     this.artigo = artigo,
     this.autor = autor,
     this.data = data,
-    this.hora = hora
+    this.urlImg = urlImg, 
+    this.urlLink = urlLink
   }
 }
 
