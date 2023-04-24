@@ -1,13 +1,6 @@
-.contente {
-  margin: auto;
-  width: 800px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 .titulo-form {
   text-align: center;
-  margin-bottom: 20px;
+  margin-top: 40px;
   padding-bottom: 50px;
 }
 
@@ -20,7 +13,7 @@
 }
 
 .box-outros {
-  padding-top: 50px;
+  padding: 50px;
 }
 
 .box-outros > ul {
@@ -73,11 +66,29 @@ textarea {
   width: 80px;
 }
 
-@media(min-width: 1080px) {
+@media screen and (max-width: 1024px) {
   .contente {
     margin: auto;
-    width: 600px;
+    width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
+  .titulo-form {
+    width: auto;
+  }
+  .box-form {
+    width: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .form {
+    margin: auto;
+    width: 400px;
+  }
+
 }

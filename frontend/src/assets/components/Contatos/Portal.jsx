@@ -1,9 +1,10 @@
 import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./Portal.css";
 
 export default function Portal() {
   return (
-    <section className="contente">
+    <section className="container">
       <div className="titulo-form">
         <h1>Portal de Reclamações</h1>
         <div className="linha_horizontal"></div>

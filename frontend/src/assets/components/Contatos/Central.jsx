@@ -1,4 +1,5 @@
 import "./Central.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import {
   FaClock,
   FaPhone,
@@ -9,7 +10,7 @@ import {
 
 export default function Central() {
   return (
-    <section className="contente">
+    <section className="container">
       <div className="titulo-central">
         <h1>Central de Atendimento</h1>
         <div className="linha_horizontal"></div>
@@ -30,6 +31,7 @@ export default function Central() {
           <address>Sab - Dom .... Fechado</address>
         </div>
         <div className="linha_vertical"></div>
+        <div className="linha"></div>
         <div className="box">
           <h2>Contatos</h2>
           <address>
