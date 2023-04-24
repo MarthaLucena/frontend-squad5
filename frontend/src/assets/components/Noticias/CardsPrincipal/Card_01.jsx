@@ -28,16 +28,18 @@ export default function CardMaior() {
   const ultimaNoticia = posts[posts.length - 1];
 
   return(
-    <div className="p-1">
-      <div className="card bg-dark text-white" key={ultimaNoticia.id}>
-        <img src={ultimaNoticia.URLIMG} className="card-img" alt="..." />
-        <div className="card-box card-img-overlay">
-          <h2 className="card-title">{ultimaNoticia.TITULO}</h2>
-          <a href={ultimaNoticia.URLLINK} className="card-text">
-            {ultimaNoticia.ARTIGO}
-          </a>
-          <span>{ultimaNoticia.AUTOR}</span>
-          <address>{ultimaNoticia.DATA}</address>
+    <div className="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+      <div className="p-1">
+        <div className="card card_principal bg-dark text-white" key={ultimaNoticia.id}>
+          <img src={ultimaNoticia.URLIMG} className="card-img" alt="..." />
+          <div className="card-box card-img-overlay">
+            <h2 className="card-title">{ultimaNoticia.TITULO}</h2>
+            <a href={ultimaNoticia.URLLINK} className="card-text">
+              {ultimaNoticia.ARTIGO}
+            </a>
+            <span>{ultimaNoticia.AUTOR}</span>
+            <address>{ultimaNoticia.DATA}</address>
+          </div>
         </div>
       </div>
     </div>

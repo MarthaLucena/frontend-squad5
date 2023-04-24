@@ -9,10 +9,8 @@ export default function Principal() {
   return (
     <section className="container d-flex">
       <div className="row">
-        <div className="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-          <Card_01 />
-        </div>
-        <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <Card_01 />
+        <div className="collumn">
           <Card_02 />
           <Card_03 />
         </div>

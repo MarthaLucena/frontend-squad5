@@ -32,11 +32,13 @@ export default function CardMaior() {
   }
 
   return (
-    <div className="p-1">
-      <div className="card bg-dark text-white" key={post.id}>
-        <img src={post.URLIMG} className="card-img" alt="..." />
-        <div className="card-box card-img-overlay">
-          <h2 className="card-title">{post.TITULO}</h2>
+    <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+      <div className="p-2">
+        <div className="card bg-dark text-white" key={post.id}>
+          <img src={post.URLIMG} className="card-img" alt="..." />
+          <div className="card-box card-img-overlay">
+            <h2 className="card-title">{post.TITULO}</h2>
+          </div>
         </div>
       </div>
     </div>
