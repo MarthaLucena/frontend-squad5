@@ -15,3 +15,7 @@
 .cardLabelPadrao {
     background-color: #a23fe3;
 }
+
+.cardImg {
+    width:fit-content;
+}

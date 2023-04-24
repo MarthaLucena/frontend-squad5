@@ -1,4 +1,6 @@
 import "../Banner/Banner.css";
+import { Link } from 'react-router-dom'
+
 
 const Banner = () => {
   return (
@@ -7,7 +9,7 @@ const Banner = () => {
         <div className="overlay"></div>
         <h4>ALÔ COMUNIDADES - O seu portal de notícias da Zona Norte</h4>
         <h1>INOVAÇÃO NA FAVELA & UNIÃO</h1>
-        <button className="lerMaisBtn">LER +</button>
+       <button className="lerMaisBtn"><Link to="/sobre">LER +</Link></button> 
       </section>
     </div>
   );

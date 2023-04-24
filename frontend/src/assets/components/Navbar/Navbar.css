@@ -87,6 +87,7 @@ ul.nav-ul {
     padding: 10px 15px;
     margin-right: 20px;
     border-radius: 20px;
+	font-size:14px;
     background-color: var(--detailsBlue);
     color:#fff;
 	display: flex;
