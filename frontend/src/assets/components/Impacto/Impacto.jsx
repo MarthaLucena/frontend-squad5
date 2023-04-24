@@ -1,13 +1,10 @@
 import "./Impacto.css"
 import { AiOutlineLine } from "react-icons/ai";
-import grafite from "../../img/grafite.jpg"
-import Lottie from "lottie-react"
-import altofalante1 from "../Lottie/altofalante1.json"
+import favela5 from "../../img/favela5.jpg"
 
 const Impacto = () => {
     return (
         <section className="impacto">
-            <Lottie className='altofalante1' animationData={altofalante1} />
             <div className="impac">
                 <h1>O Impacto Social</h1>
                 <div className="iconI"> <AiOutlineLine /> </div>
@@ -16,9 +13,10 @@ const Impacto = () => {
                     Visamos informar os moradores de uma comunidade pode ter um impacto social significativo, contribuind	o para a melhoria da saúde, o aumento da conscientização sobre direitos humanos e a participação ativa da comunidade em questões sociais e políticas.
                 </p>
             </div>
-            <div className="imgI">
-                <img src={grafite} />
+            <div className="imgImp">
+                <img src={favela5} />
             </div>
+
         </section>
     )
 }

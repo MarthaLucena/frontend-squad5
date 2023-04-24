@@ -3,49 +3,52 @@
     padding: 0;
 }
 
-.altofalante4 {
-    height: 400px;
-    width: 400px;
-    background-color: rgb(255, 218, 55);
-    border-radius: 50%;
-    margin-top: 45px;
-}
 
 .noticias {
-    background-color: yellow;
+    background-color: white;
     display: flex;
-    justify-content:space-around;
-
-    
+    align-items: center;
 
 }
 
 .notic {
+    padding: 15px;
     background-color: whitesmoke;
     width: 50%;
-    margin-bottom: 45px;
-    margin-top: 45px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 15px;
-    border-radius: 30px;
-    
- }
+    margin: 0 30px 0 0;
+    border-radius: 0 30px 30px 0;
+}
 
 .notic p {
-    font-size: 25px;
+    font-size: 1rem;
+    margin: 0 0 0 30px;
 }
 
 .notic h1 {
-    font-size: 70px;
+    font-size: 2rem;
     color: gray;
+    margin: 0 0 0 30px;
 }
 
+.imagesNot img {
+    width: 400px;
+    height: 400px;
+    margin: 35px;
 
+}
+.imagesNot{
+    display: flex;
+}
 
 
 .iconN {
     color: goldenrod;
     font-size: 70PX;
+    margin: 0 0 0 20px;
+}
+.favela6{
+    margin-top: -20 px;
+}
+.favela7{
+    margin-top: 20px;
 }

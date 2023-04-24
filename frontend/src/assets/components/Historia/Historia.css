@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -5,33 +6,42 @@
 .quem{
     padding: 15px;
     background-color: whitesmoke;
-    border-radius: 15px;
     width: 50%;
-    margin-left: 70PX;
+    margin: 0 30px 0 0;
+    border-radius: 0 30px 30px 0;
 
-}
+ }
 .quem p{
-    font-size: 30px;
+    font-size: 1rem;
+    margin: 0 0 0 30px;
 }
 .quem h1{
-    font-size: 70px;
+    font-size: 2rem;
     color: gray;
+    margin: 0 0 0 30px;
 }
 .quemsomos{
-    background-color: blue;
+    background-color: white;
     display: flex;
     align-items: center;
-    padding-top: 10px;
-
+ 
 }
 
 .iconH{
     color: goldenrod;
     font-size: 70PX;
+    margin: 0 0 0 20px;
 }
-.animacao1{
-    height: 700px;
-    width: 700px;
-    margin-left: 400px;
+.imagesHis img{
+    width: 400px;
+    height: 400px;
+    margin: 35px;
+
+}
+.imagesHis{
+    display: flex;
+}
+.favela3{
+    margin-top: 30px;
 }
 

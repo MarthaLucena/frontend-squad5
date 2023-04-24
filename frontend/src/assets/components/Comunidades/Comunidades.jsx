@@ -1,21 +1,19 @@
 import "./Comunidades.css"
 import { AiOutlineLine } from "react-icons/ai";
-import Lottie from "lottie-react";
-import altofalante2 from "../Lottie/altofalante2.json"
-import favela5 from "../../img/favela5.jpg"
+import favela9 from "../../img/favela9.jpg"
 
 const Comunidades = () => {
     return (
         <section className="comunidades">
-            <Lottie className='altofalante2' animationData={altofalante2} />
             <div className="comun">
                 <h1>Comunidades</h1>
                 <div className="iconC"> <AiOutlineLine /> </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A tempore dolorum, eos voluptatem nam iusto numquam quam hic, nostrum fuga distinctio vero ipsa quos architecto. Labore, consequatur. Expedita, error quos.</p>
+                <p>Uma comunidade bem informada é essencial para o seu desenvolvimento e crescimento. Quando os membros de uma comunidade têm acesso a informações precisas e relevantes, eles se tornam mais conscientes dos problemas e oportunidades que afetam suas vidas. Isso pode levar a uma série de benefícios importantes para a comunidade.</p>
             </div>
-            <div className="imgC">
-                <img src={favela5} />
+            <div className="imgCom">
+                <img src={favela9} />
             </div>
+
         </section>
     )
 }

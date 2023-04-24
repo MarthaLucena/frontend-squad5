@@ -1,16 +1,24 @@
 import "./Projetos.css";
 import { AiOutlineLine } from "react-icons/ai";
-import Lottie from "lottie-react"
-import altofalante3 from "../Lottie/altofalante3.json"
+import grafite from "../../img/grafite.jpg"
+import escada from "../../img/escada.jpg"
+
 
 const Projetos = () => {
     return (
         <section className="projetos">
-            <Lottie className='altofalante3' animationData={altofalante3} />
             <div className="proj">
                 <h1>Projetos</h1>
                 <div className="iconP"> <AiOutlineLine /> </div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni voluptates facilis tempora, hic quos repellendus explicabo provident. Tempore corporis minima, aliquid culpa recusandae quibusdam, modi repellat praesentium ex at aliquam.</p>
+                <p>Um projeto que fornece informações sobre os direitos humanos pode ajudar a aumentar a conscientização sobre questões importantes, como a discriminação e a violência. Isso pode levar a uma maior tolerância e respeito entre os membros da comunidade, além de ajudar a prevenir e combater atos de violência e discriminação. </p>
+            </div>
+            <div className="imgPro">
+                <div className="escada">
+                    <img src={escada} />
+                </div>
+                <div className="grafite">
+                    <img src={grafite} />
+                </div>
             </div>
         </section>
     )
