@@ -1,4 +1,5 @@
 import db from "../infra/db.js";
+import Admin from "../models/Admin.js";
 
 class AdminDAO {
 
@@ -17,10 +18,10 @@ class AdminDAO {
      
     // POST  --  Criar um novo Administrador
     static inserir(admin){
-         const query = `INSERT INTO ADMIN (nome, sobrenome, email, senha) VALUES (?, ?, ?, ?)`;
+         const query = `INSERT INTO Admin (username, email, password) VALUES (?, ?, ?)`;
 
          return new Promise((resolve, reject) => {
-             db.run(query, [admin.nome, admin.sobrenome, admin.email, admin.senha], (err) =>{
+             db.run(query, [admin.username, admin.email, admin.password], (err) =>{
                 if (err){
                      reject({
                         mensagem: "Erro ao inserir o Administrador",
@@ -31,22 +32,43 @@ class AdminDAO {
            });
        });
     }
+
+      //Buscar por email e senha
+  static buscarAdmin(email, password) {
+    const query = "SELECT * FROM Admin WHERE email = ? AND password = ?";
+
+    return new Promise((resolve, reject) => {
+      db.get(query, [email, password], (err, row) => {
+        if (err) {
+          reject(err);
+        } else if (!row) {
+          resolve(null);
+        } else {
+          const admin = new Admin(row.username, row.email, row.password);
+          admin.username = row.username;
+          admin.email = row.email;
+          admin.password = row.password;
+          resolve(admin);
+        }
+      })
+    })
+  }
     
-    // GET -- BUSCAR POR EMAIL
-    static buscarPorEmail(email) {
-        const query = "SELECT * FROM ADMIN WHERE email = ?";
-        return new Promise((resolve, reject) => {
-          db.get(query, [email], (err, row) => {
-            if (err) {
-              reject(false);
-            }
-            resolve(row);
-          });
+    // GET -- Buscar por ID
+    static buscarID(id){
+      const query = "SELECT * FROM Admin WHERE id = ?";
+      return new Promise((resolve, reject) => {
+        db.get(query, [id], (err, row) => {
+          if (err) {
+            reject(false);
+          }
+          resolve(row);
         });
-      }
+      });
+    }
 
     static buscarPorID(id) {
-        const query = "SELECT * FROM ADMIN WHERE id = ?";
+        const query = "SELECT * FROM Admin WHERE id = ?";
         return new Promise((resolve, reject) => {
           db.get(query, [id], (err, row) => {
             if (err) {
@@ -60,11 +82,11 @@ class AdminDAO {
   // PUT  --  
   static atualizar(id, admin){
     const query =
-    "UPDATE ADMIN SET nome = ?, sobrenome = ? , email = ?, senha = ? WHERE id = ?";
+    "UPDATE Admin SET username = ?, email = ?, password = ? WHERE id = ?";
     return new Promise((resolve, reject) =>{
       db.run(
         query,
-        [admin.nome, admin.sobrenome, admin.email, admin.senha, id],
+        [admin.username, admin.email, admin.password, id],
         (err)=>{
           if (err){
             reject({
@@ -83,17 +105,17 @@ class AdminDAO {
   }   
 
     // DELETE -- Deletar um Administrador pelo Email
-    static deletar(email){
-        const query = "DELETE FROM ADMIN WHERE email = ?";
+    static deletar(id){
+        const query = "DELETE FROM Admin WHERE id = ?";
         return new Promise((resolve,reject) =>{
-          db.run(query, [email], (err) =>{
+          db.run(query, [id], (err) =>{
             if(err){
               reject({
                 mensagem: "Erro ao deletar o seu Administrador",
                 erro: err,
               });
             }
-            resolve({mensagem: "Administrador deletado com sucesso", email: email});
+            resolve({mensagem: "Administrador deletado com sucesso", id: id});
           });
         });
       }   

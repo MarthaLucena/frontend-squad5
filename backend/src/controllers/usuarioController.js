@@ -5,11 +5,12 @@ import Usuario from "../models/Usuario.js"
 class usuarioController {
     static rotas(app){
         // Rota para o recurso usuario
-        app.get('/usuario', usuarioController.listar)
-        app.post('/usuario', usuarioController.inserir)
-        app.get("/usuario/:email", usuarioController.filtrarPorEmail)
-        app.delete("/usuario/:email", usuarioController.apagarUsuario)
-        app.put("/usuario/id/:id", usuarioController.atualizarUsuario)
+        app.get('/Usuario', usuarioController.listar)
+        app.post('/Usuario', usuarioController.inserir)
+        app.get("/Usuario/id/:id", usuarioController.filtrarPorID)
+        app.post('/Usuario/login', usuarioController.login)
+        app.delete("/Usuario/:id", usuarioController.apagarUsuario)
+        app.put("/Usuario/id/:id", usuarioController.atualizarUsuario)
     }
     
     // GET -- Listar todos os usuários
@@ -21,13 +22,13 @@ class usuarioController {
     
     // POST  --  Criar um novo usuário
     static async inserir(req, res) {
-        const usuario = {
-            nome: req.body.nome,
-            email: req.body.email,
-            senha: req.body.senha
-        }
-
-        if (!usuario || !usuario.nome || !usuario.email || !usuario.senha) {
+        const usuario =  new Usuario (
+            req.body.username,
+            req.body.email,
+            req.body.password,
+        )
+        
+        if (!usuario || !usuario.username || !usuario.email || !usuario.password) {
             res.status(400).send("Precisa passar as informações")
             return
         }
@@ -43,28 +44,47 @@ class usuarioController {
         res.status(201).send({ "Mensagem": "usuario criado com sucesso", "Novo usuario: ": usuario })
     }
 
-    // GET -- BUSCAR POR EMAIL
-    static async filtrarPorEmail(req, res){
-        const usuario = await UsuarioDAO.buscarPorEmail(req.params.email)
-
-        if (!usuario) {
-
-            res.status(404).send("usuario não encontrado")
-        }
-
-        res.status(200).send(usuario)      
+    //LOGIN
+    static async login(req, res) {
+        const { email, password } = req.body
+      
+        try {
+            const usuario = await UsuarioDAO.buscarUsuario(email, password);
+      
+            if (!usuario) {
+                    res.status(401).send('Email ou senha inválidos');
+            } else {
+                    const token = 'token_de_autenticacao';
+                    res.cookie('token', token);
+                    res.send(usuario);
+            }
+            } catch(err) {
+                console.log(err);
+                res.status(500).send('Erro ao realizar login');
+            }
     }
+
+    // GET -- BUSCAR POR ID
+    static async filtrarPorID(req, res){
+        const usuario = await UsuarioDAO.buscarPorID(req.params.id)
+        if (!usuario) {
+            res.status(404).send("Cliente não encontrado")
+            return
+        }
+        res.status(200).send(usuario)
+    }
+    
     
     // DELETE -- Deletar um usuário pelo email
     static async apagarUsuario(req, res){
-       const usuario = await UsuarioDAO.buscarPorEmail(req.params.email)
+       const usuario = await UsuarioDAO.buscarPorEmail(req.params.id)
 
        if(!usuario){
            res.status(404).send("Usuário não encontrado")
            return
        }
 
-       const result = await UsuarioDAO.deletar(req.params.email)
+       const result = await UsuarioDAO.deletar(req.params.id)
 
        if(result.erro){
             res.status(400).send({ 'Mensagem': 'Usuário não deletado' })
@@ -82,11 +102,11 @@ class usuarioController {
             return
         }
 
-        const usuario = new Usuario(req.body.nome, req.body.email, req.body.senha)
+        const usuario = new Usuario(req.body.username, req.body.email, req.body.password)
 
 
 
-        if (!usuario || !usuario.nome || !usuario.email || !usuario.senha) {
+        if (!usuario || !usuario.username || !usuario.email || !usuario.password) {
             res.status(400).send("Precisa passar todas as informações")
             return
         }

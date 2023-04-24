@@ -1,9 +1,8 @@
 class Admin {
-    constructor( nome, sobrenome, email, senha){
-        this.nome = nome,
-        this.sobrenome = sobrenome,
-        this.email = email,
-        this.senha = senha
+    constructor(username, email, password) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
     }
 }
 

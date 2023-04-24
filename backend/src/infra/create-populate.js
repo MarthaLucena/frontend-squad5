@@ -7,34 +7,32 @@ import db from "./db.js";
 sqlite3.verbose()
 
 //==== Usuários
-const USUARIOS_SCHEMA = `
-CREATE TABLE IF NOT EXISTS "USUARIOS" (
+const USUARIO_SCHEMA = `
+CREATE TABLE IF NOT EXISTS "Usuario" (
     "ID" INTEGER PRIMARY KEY AUTOINCREMENT,
-    "NOME" varchar(64),
-    "EMAIL" varchar(64),
-    "SENHA" varchar(64)
+    "username" varchar(64),
+    "email" varchar(64),
+    "password" varchar(64)
   );`;
 
-const ADD_USUARIOS_DATA = `
-INSERT INTO USUARIOS (NOME, EMAIL, SENHA)
+const ADD_USUARIO_DATA = `
+INSERT INTO Usuario (username, email, password)
 VALUES 
-    ('Eugênio Oliveira', 'eugenio.oliveira@bol.com.br', '*******'),
-    ('Olívia Ribeiro', 'olivia.ribeiro@gmail.com', '********'),
-    ('Mirtes Faria Lima', 'mirtes_fl@yahoo.com', '********')
-`
+    ('Teste', 'teste@teste', '1234');
+`;
 
 function criaTabelaUsr() {
-    db.run(USUARIOS_SCHEMA, (error)=> {
+    db.run(USUARIO_SCHEMA, (error)=> {
        if (error) console.log(error);
     });
 }
-
 
 function populaTabelaUsr() {
-    db.run(ADD_USUARIOS_DATA, (error)=> {
+    db.run(ADD_USUARIO_DATA, (error)=> {
        if (error) console.log(error);
     });
 }
+
 
 //==== Parceiros
 const PARCEIROS_SCHEMA = `
@@ -71,20 +69,18 @@ function populaTabelaParceiros() {
 
 //==== ADMIN
 const ADMIN_SCHEMA = `
-CREATE TABLE IF NOT EXISTS "ADMIN" (
-"ID" INTEGER PRIMARY KEY AUTOINCREMENT,
-"NOME" varchar(64),
-"SOBRENOME" varchar(64),
-"EMAIL" varchar(64),
-"SENHA" varchar(64)
-)`
+CREATE TABLE IF NOT EXISTS "Admin" (
+    "ID" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "username" varchar(64),
+    "email" varchar(64),
+    "password" varchar(64)
+  );`;
 
 const ADD_ADMIN_DATA = `
-INSERT INTO ADMIN (NOME, SOBRENOME, EMAIL, SENHA)
-VALUES
-    ('Danilo', 'Santos', 'danilo@gmail.com', '************'),
-    ('Rayssa', 'Cadilhe', 'rayssa@gmail.com', '***********')
-`
+INSERT INTO Admin (username, email, password)
+VALUES 
+    ('Admin', 'teste@teste', 'admin');
+`;
 
 function criaTabelaAdmin() {
     db.run(ADMIN_SCHEMA, (error) => {
