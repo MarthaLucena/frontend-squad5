@@ -18,6 +18,7 @@ import contatoController from './controllers/contatoController.js';
 import imagensController from './controllers/imagensController.js';
 import noticiasController from './controllers/noticiasController.js';
 import parceirosController from './controllers/parceirosController.js';
+import sobreController from './controllers/sobreController.js';
 
 usuarioController.rotas(app)
 adminController.rotas(app)
@@ -25,5 +26,6 @@ contatoController.rotas(app)
 imagensController.rotas(app)
 noticiasController.rotas(app)
 parceirosController.rotas(app)
+sobreController.rotas(app)
 
 export default app

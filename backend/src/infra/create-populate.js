@@ -185,6 +185,39 @@ function populaTabelaNoticias() {
   });
 }
 
+
+//==== SOBRE
+const SOBRE_SCHEMA = `
+CREATE TABLE IF NOT EXISTS "SOBRE" (
+"ID" INTEGER PRIMARY KEY AUTOINCREMENT,
+"TITULO" varchar(255),
+"TEXTO" varchar(900)
+)`;
+
+const ADD_SOBRE_DATA = `
+INSERT INTO SOBRE (TITULO, TEXTO)
+VALUES
+    ('Quem somos', 'Nós somos uma plataforma voltada para conectar pessoas, empresas e organizações que buscam ajudar as comunidades carentes das favelas do Rio de Janeiro. Acreditamos no poder da união e no potencial transformador do trabalho voluntário e da solidariedade. Nosso objetivo é promover a inclusão social, a educação, a cultura, a saúde e o desenvolvimento sustentável das favelas, garantindo assim melhores condições de vida e oportunidade para as pessoas que vivem nessas comunidades. Contamos com uma equipe dedicada e comprometida com a nossa missão, além de parceiros e voluntários engajados em fazer a diferença. Junte-se a nós nessa jornada!'),
+    ('Nossa Missão', 'Nossa missão é levar informação de qualidade para as comunidades, de forma clara e acessível. Acreditamos que a informação é um direito de todos e que é essencial para o desenvolvimento e empoderamento das pessoas Nosso projeto tem como objetivo fornecer, podemos contribuir para a melhoria da qualidade de vida das comunidades e para o desenvolvimento sustentável da sociedade como um todo. Por isso, estamos comprometidos com a nossa missão e trabalhamos diariamente para atingir nossos objetivos e levar informação para aqueles que mais precisam.'),
+    ('Notícias', 'As notícias são publicadas por nossos administradores, que também são moradores. Ou seja, é de morador para morador. Você fala, nós escutamos. Nós falamos, mais moradores ficam informados. Acreditamos que ao fornecer informações de qualidade e empoderar as pessoas com o conhecimento, podemos contribuir para a melhoria da qualidade de vida das comunidades e para o desenvolvimento sustentável da sociedade como um todo. Por isso, estamos comprometidos com a nossa missão e trabalhamos diariamente para atingir nossos objetivos e levar informação para aqueles que mais precisam.'),
+    ('O Impacto Social', 'Um projeto que visa informar os moradores de uma comunidade pode ter um impacto social significativo na vida das pessoas. Quando os moradores são informados sobre seus direitos e têm acesso a informações importantes sobre serviços públicos e questões sociais, eles podem tomar decisões mais informadas e se engajar mais ativamente na sua comunidade. Visamos informar os moradores de uma comunidade pode ter um impacto social significativo, contribuind o para a melhoria da saúde, o aumento da conscientização sobre direitos humanos e a participação ativa da comunidade em questões sociais e políticas.'),
+    ('Projetos', 'Um projeto que fornece informações sobre os direitos humanos pode ajudar a aumentar a conscientização sobre questões importantes, como a discriminação e a violência. Isso pode levar a uma maior tolerância e respeito entre os membros da comunidade, além de ajudar a prevenir e combater atos de violência e discriminação.'),
+    ('Comunidades', 'Uma comunidade bem informada é essencial para o seu desenvolvimento e crescimento. Quando os membros de uma comunidade têm acesso a informações precisas e relevantes, eles se tornam mais conscientes dos problemas e oportunidades que afetam suas vidas. Isso pode levar a uma série de benefícios importantes para a comunidade.')
+`;
+
+function criaTabelaSobre() {
+  db.run(SOBRE_SCHEMA, (error) => {
+    if (error) console.log(error);
+  });
+}
+
+function populaTabelaSobre() {
+  db.run(ADD_SOBRE_DATA, (error) => {
+    if (error) console.log(error);
+  });
+}
+
+
 db.serialize(() => {
   criaTabelaUsr();
   populaTabelaUsr();
@@ -198,4 +231,6 @@ db.serialize(() => {
   populaTabelaContato();
   criaTabelaImagens();
   populaTabelaImagens();
+  criaTabelaSobre();
+  populaTabelaSobre();
 });
