@@ -42,7 +42,7 @@ function Navbar() {
 						<Link to="/contato">CONTATO</Link>
 					</li>
 					<li>
-						<button className="doarBtn">DOAR AGORA</button>
+						<Link to ="/doe"><button className="doarBtn">DOAR AGORA</button></Link>
 					</li>
 					<li>
 				      {logado ? <Link to="/login"><li className="logado">{Object.keys(infoUsuario).length === 0 ? infoAdmin.username : infoUsuario.username} </li></Link> : <Link to="/login"><li className="logado">Login</li></Link> }

@@ -1,8 +1,9 @@
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Sobre from "./pages/Sobre";
 import Contato from "./pages/Contato"
 import Noticias from './pages/Noticias.jsx'
+import Doe from "./pages/Doe.jsx"
 import Login from './pages/Login.jsx'
 import Cadastro from "./pages/Cadastro.jsx";
 import IPerfil from "./pages/IPerfil.jsx";
@@ -26,6 +27,9 @@ function app() {
             <Contato />
           </Route>
 
+          <Route path="/doe">
+            <Doe />
+          </Route>
           {/* ===== As rotas relacionadas as imports de cima também estão comentadas para evitar erro.
           Conforme as Pages forem configuradas, tirar o comentário */}
 
