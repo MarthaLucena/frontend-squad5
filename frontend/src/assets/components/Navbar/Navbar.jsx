@@ -1,12 +1,10 @@
-import { useRef, useState } from "react";
+import { useRef, useStatem, useContext } from "react";
 import { Link } from 'react-router-dom'
 import { FaBars, FaTimes, FaUser } from "react-icons/fa";
 import "../Navbar/Navbar.css"
+import { Context } from "../../../../../Context/AuthContext";
 
 function Navbar() {
-
-	const [activeLink, setActiveLink] = useState("home");
-
 
 	const navRef = useRef();
 
@@ -14,32 +12,44 @@ function Navbar() {
 		navRef.current.classList.toggle("responsive_nav");
 	};
 
+	const {logado, isLogado, infoUsuario, infoAdmin} = useContext(Context);
+
+    function handleDeslogar() {
+		isLogado(false);
+		setEmail('');
+		setSenha('');
+		setInfoUsuario({});
+		setInfoAdmin({});
+		history.push('/login'); // Redirecionar para a página de login
+	  }
 
 	return (
 
 		<header>
 			<Link to="/"><h3 className="fonteLogo">ALÔ COMUNIDADES</h3></Link>
-			<nav ref={navRef} >
+			<nav ref={navRef} className="navPrincipal">
 				<ul className="nav-ul">
 				<li>
-						<Link to="/" onClick={() => { showNavbar(); setActiveLink("home") }} className={activeLink === "home" ? "active-link" : ""}>HOME</Link>
+						<Link to="/">HOME</Link>
 					</li>
 					<li>
-						<Link to="/sobre" onClick={() => { showNavbar(); setActiveLink("sobre") }} className={activeLink === "sobre" ? "active-link" : ""}>QUEM SOMOS</Link>
-					</li>
-
-					<li>
-						<Link to="/noticias" onClick={() => { showNavbar(); setActiveLink("noticias") }} className={activeLink === "noticias" ? "active-link" : ""}>NOTÍCIAS</Link>
-					</li>
-					
-					<li>
-						<Link to="/contato" onClick={() => { showNavbar(); setActiveLink("contato") }} className={activeLink === "contato" ? "active-link" : ""}>CONTATO</Link>
+						<Link to="/sobre">QUEM SOMOS</Link>
 					</li>
 					<li>
-						<Link to="/login" onClick={() => { showNavbar(); setActiveLink("login") }} className={activeLink === "login" ? "active-link" : ""}> <FaUser />  </Link>
+						<Link to="/noticias">NOTÍCIAS</Link>
 					</li>
 					<li>
-					<Link to="/doe" onClick={() => { showNavbar(); setActiveLink("doe") }} className={activeLink === "login" ? "active-link" : ""}> <button className="doarBtn">DOAR AGORA</button>  </Link>
+						<Link to="/contato">CONTATO</Link>
+					</li>
+					<li>
+						<button className="doarBtn">DOAR AGORA</button>
+					</li>
+					<li>
+				      {logado ? <Link to="/login"><li className="logado">{Object.keys(infoUsuario).length === 0 ? infoAdmin.username : infoUsuario.username} </li></Link> : <Link to="/login"><li className="logado">Login</li></Link> }
+					</li>
+					/
+					<li>
+				      {logado ? <Link to="/login"><li className="logado" onClick={handleDeslogar}>Sair </li></Link> : <Link to="/Cadastro"><li className="logado">Cadastre-se </li></Link> }
 					</li>
 				</ul>
 				<button

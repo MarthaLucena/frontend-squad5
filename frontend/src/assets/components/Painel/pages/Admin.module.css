@@ -1,0 +1,43 @@
+.painel {
+    margin: 100px;
+}
+
+.menu {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .menuList {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menuItem {
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menuItem:hover {
+    border-bottom-color: #007bff;
+  }
+  
+  .menuLink {
+    display: block;
+    padding: 12px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  .menuLink:hover {
+    color: #007bff;
+  }
+  

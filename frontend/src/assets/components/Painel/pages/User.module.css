@@ -1,0 +1,44 @@
+.perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+}
+.containerLogado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.containerInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.infoUsuario {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    width: 50%;
+}
+
+.infoField {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.infoField label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.logoutButton {
+    width: 50%;
+    margin-top: 10px;
+}

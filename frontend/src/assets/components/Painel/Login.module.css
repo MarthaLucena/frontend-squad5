@@ -1,0 +1,160 @@
+
+.containerLogin {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 5%;
+    width: 55%;
+    text-align: center;
+    border-radius: 20px 0 0 20px;
+    background-color: #FFF;
+}
+
+.containerLogado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 55%;
+    margin-top: 200px;
+    text-align: center;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.form label {
+    text-align: left;
+    margin-bottom: 3%;
+    font-size: 14px;
+}
+.label {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.form input {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+    margin: 0 auto;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 1%;
+    padding-left: 3%;
+}
+
+.form input:focus {
+    outline: none;
+    border: none;
+}
+
+.form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+    border-radius: 30px;
+    border: 1px solid #8F9092;
+    transition: all 0.2s ease;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #606060;
+    text-shadow: 0 1px #fff;
+    margin: 10px 0;
+}
+.form button:hover {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+}
+.form button:disabled {
+    border: 1px solid #8F9092;
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+}
+.form button:active {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+.containerImage {
+    display: flex;
+    width: 45%;
+    margin: 0 auto;
+    background-color: #dddddd;
+    border-radius: 0 20px 20px 0;
+}
+
+.btnCE{
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 2%;
+}
+
+.btnAdmin{
+    display: flex;
+    justify-content: center;
+}
+
+.btnUserAdmin{
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+               -6px -6px 12px #ffffff;
+    cursor: pointer;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.finalForm{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.errorMsg {
+    color: #FD2007;
+    margin-bottom: 10%;
+    font-size: 14px;
+}
+
+
+
+@media (max-width: 768px) { 
+    .containerLogin {
+        width: 95%;
+        border-radius: 20px 20px 0 0;
+    }
+    .containerImage {
+        width: 100%;
+        border-radius: 0 0 20px 20px;
+    }
+    .btnCE{
+        width: 70%;
+    }
+    .containerLogado {
+        padding-bottom: 10%;
+        padding-top: 10%;
+    }
+
+}

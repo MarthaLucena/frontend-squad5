@@ -1,6 +1,4 @@
-import Bairros from "../Bairros";
 import "../Banner/Banner.css";
-import Cards from "../CardNoticia/Cards";
 
 const Banner = () => {
   return (

@@ -6,7 +6,7 @@ import "./Parallax.css";
 const MyParallax = () => {
   return (
     <main className="moduleContent">
-      <div className="module parallax parallax-1">
+      <div className="wrapper">
         <Cards />
         <Bairros />
         <Mapa />

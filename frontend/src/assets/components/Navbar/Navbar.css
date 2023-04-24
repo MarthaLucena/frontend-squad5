@@ -20,7 +20,7 @@ header {
 	right: 0;
 	height: 80px;
 	z-index: 99999;
-	background-color: transparent;
+	background-color: black;
 	padding: 0 30px;
 }
 
@@ -72,6 +72,10 @@ ul.nav-ul {
     color:#FFFF;
 }
 
+.logado{
+	margin: 5px;
+	font-size: 12px;
+}
 
 .fonteLogo {
     color:#FFFF;
@@ -80,14 +84,16 @@ ul.nav-ul {
 }
 
 .doarBtn {
-    padding: 10px 30px;
-    margin: 20px;
+    padding: 10px 15px;
+    margin-right: 20px;
     border-radius: 20px;
     background-color: var(--detailsBlue);
     color:#fff;
 	display: flex;
 	border: none;
+	cursor: pointer;
 }
+
 
 @media only screen and (max-width: 1024px) {
 	header .nav-btn {
