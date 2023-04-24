@@ -72,3 +72,12 @@ textarea {
   padding: 5px;
   width: 80px;
 }
+
+@media(min-width: 1080px) {
+  .contente {
+    margin: auto;
+    width: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
