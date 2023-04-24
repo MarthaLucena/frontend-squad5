@@ -1,6 +1,6 @@
-import Bairros from "../Bairros";
+import Bairros from "../Bairros/Bairros";
 import Cards from "../CardNoticia/Cards";
-import Mapa from "../Mapa";
+import Mapa from "../Mapa/Mapa";
 import "./Parallax.css";
 
 const MyParallax = () => {
