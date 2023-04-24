@@ -7,7 +7,6 @@ function Noticias() {
   return (
     <div>
       <Navbar />
-      <Banner />
       <Principal/>
       <Footer />
     </div>

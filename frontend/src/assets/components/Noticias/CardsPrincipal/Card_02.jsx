@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
 const baseURL = "http://localhost:3000/noticia/id";
-const idDaNoticia = 2; // Substitua pelo ID da notícia desejada
+const idDaNoticia = 1; // Substitua pelo ID da notícia desejada
 
 export default function CardMaior() {
   const [post, setPost] = React.useState(null);
@@ -28,16 +28,16 @@ export default function CardMaior() {
   if (error) return `Error: ${error.message}`;
 
   if (!post) {
-    return "Loading...";
+    return "";
   }
 
   return (
-    <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+    <div className="col-12 col-sm-10 col-md-6 col-lg-5 col-xl-5">
       <div className="p-2">
-        <div className="card bg-dark text-white" key={post.id}>
-          <img src={post.URLIMG} className="card-img" alt="..." />
+        <div className="card card_secundario bg-dark text-white" key={post.id}>
+          <img src={post.urlImg} className="card-img" alt="..." />
           <div className="card-box card-img-overlay">
-            <h2 className="card-title">{post.TITULO}</h2>
+            <h2 className="card-title">{post.titulo}</h2>
           </div>
         </div>
       </div>

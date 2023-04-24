@@ -4,7 +4,7 @@ import "./Portal.css";
 
 export default function Portal() {
   return (
-    <section className="container">
+    <section className="container contente">
       <div className="titulo-form">
         <h1>Portal de Reclamações</h1>
         <div className="linha_horizontal"></div>

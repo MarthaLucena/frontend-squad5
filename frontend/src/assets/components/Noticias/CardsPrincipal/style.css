@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.card_secundario{
+  width: 100%;
+}
+
 .card-title{
   font-size: 24px;
   text-shadow: 0px 0px 5px black;

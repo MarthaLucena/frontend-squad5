@@ -8,8 +8,7 @@ import Central from "../assets/components/Contatos/Central"
 function Contato() {
   return (
     <main>
-      <Navbar />
-      <Banner/>
+      <Navbar />' '
       <Portal/>
       <Central/>
       <Footer />

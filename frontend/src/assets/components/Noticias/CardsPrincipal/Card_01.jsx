@@ -10,7 +10,8 @@ export default function CardMaior() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get(`${baseURL}`)
+    axios
+      .get(`${baseURL}`)
       .then((response) => {
         setPosts(response.data);
       })
@@ -22,24 +23,25 @@ export default function CardMaior() {
   if (error) return `Error: ${error.message}`;
 
   if (posts.length === 0) {
-    return "Loading...";
+    return "";
   }
 
-  const ultimaNoticia = posts[posts.length - 1];
+  const ultimaNoticia = posts[posts.length - 2];
 
-  return(
-    <div className="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-      <div className="p-1">
-        <div className="card card_principal bg-dark text-white" key={ultimaNoticia.id}>
-          <img src={ultimaNoticia.URLIMG} className="card-img" alt="..." />
-          <div className="card-box card-img-overlay">
-            <h2 className="card-title">{ultimaNoticia.TITULO}</h2>
-            <a href={ultimaNoticia.URLLINK} className="card-text">
-              {ultimaNoticia.ARTIGO}
-            </a>
-            <span>{ultimaNoticia.AUTOR}</span>
-            <address>{ultimaNoticia.DATA}</address>
-          </div>
+  return (
+    <div className="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 p-2">
+      <div
+        className="card card_principal bg-dark text-white"
+        key={ultimaNoticia.id}
+      >
+        <img src={ultimaNoticia.urlImg} className="card-img" alt="..." />
+        <div className="card-box card-img-overlay">
+          <h2 className="card-title">{ultimaNoticia.titulo}</h2>
+          <a href={ultimaNoticia.urlLink} className="card-text">
+            {ultimaNoticia.artigo}
+          </a>
+          <span>{ultimaNoticia.autor}</span>
+          <address>{ultimaNoticia.data}</address>
         </div>
       </div>
     </div>

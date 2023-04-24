@@ -10,7 +10,7 @@ import {
 
 export default function Central() {
   return (
-    <section className="container">
+    <section className="container contente">
       <div className="titulo-central">
         <h1>Central de Atendimento</h1>
         <div className="linha_horizontal"></div>
