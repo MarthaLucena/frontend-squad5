@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Sobre from "./pages/Sobre";
 import Contato from "./pages/Contato";
 import Noticias from "./pages/Noticias";
+import Doacao from "./assets/components/Doacao/Doacao";
 
 /* ===== Imports estão comentados para não dar erro. Ao inserir os componentes nas pages, tira o comentário do import!
 
@@ -36,6 +37,10 @@ function app() {
             <Noticias />
           </Route>
 
+     <Route path="/doe">
+            <Doacao />
+          </Route>
+   
           {/* ===== As rotas relacionadas as imports de cima também estão comentadas para evitar erro.
           Conforme as Pages forem configuradas, tirar o comentário
 
