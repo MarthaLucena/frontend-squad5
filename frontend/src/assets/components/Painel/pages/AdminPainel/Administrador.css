@@ -1,23 +1,25 @@
+
+
 table {
     width: 100vw;
     border-collapse: collapse;
-    margin: 20px 0px;
     font-size: 1em;
     min-width: 400px;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-
+    background-color: #f8f8f8;
   }
   
   th,
   td {
     padding: 12px 15px;
+    background-color: #ffffff;
   }
   
   thead {
-    background-color: #d4d2d2;
-    color: #302f2f;
+    background-color: #161616;
+    color: #ffffff;
     text-align: left;
     font-weight: bold;
   }
@@ -27,7 +29,7 @@ table {
   }
   
   tbody td {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #050505;
     border-right: 1px solid #dddddd;
     position: relative;
   }
@@ -113,7 +115,8 @@ table {
   .form-container {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 0px;
+    background-color: #ffffff;
   }
   
   .form-container label {
@@ -131,6 +134,7 @@ table {
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 16px;
+   
   }
   
   .form-container button[type="submit"] {

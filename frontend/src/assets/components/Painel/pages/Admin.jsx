@@ -12,9 +12,11 @@ import Sobre from "./AdminPainel/Sobre";
 function PerfilAdmin() {
   return (
     <>
+
       <div className={styles.painel}>
         <Router>
-            <ul className={styles.menuList}>
+           <div>
+           <ul className={styles.menuList}>
               <li className={styles.menuItem}>
                 <Link to="/Admin" className={styles.menuLink}>
                   Home
@@ -36,7 +38,7 @@ function PerfilAdmin() {
                 </Link>
               </li>
             </ul>
-
+           </div>
           <Switch>
           <Route path="/Login">
               <Home />

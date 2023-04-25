@@ -104,7 +104,7 @@ function Painel() {
 
     return (
         <>
-            <div className={styles.container}>
+            <div className={styles.centro}>
                 {usuario ?
                       <>
                         {logado && infoAdmin ?
@@ -112,9 +112,9 @@ function Painel() {
                             :
 
                             <div className={styles.containerLogin}>
-                                <h1>Admin</h1>
+                                <div className={styles.loginTitulo}><h1>Administrador</h1></div>
                                 <div className={styles.btnCE}>
-                                    <button  onClick={handleUsuario} className={styles.btnUserAdmin}>Cliente</button>
+                                    <button  onClick={handleUsuario} className={styles.btnUserAdmin}>Usuário</button>
                                 </div>
                                 <form className={styles.form} onSubmit={handleSubmitAdmin}>
                                     <label>Email</label>
@@ -140,7 +140,7 @@ function Painel() {
                             :
 
                             <div className={styles.containerLogin}>
-                                <h1>Login</h1>
+                                <div className={styles.loginTitulo}><h1>Usuário</h1></div>
                                 <div className={styles.btnCE}>
                                    <button variant="outline-secondary" onClick={handleAdmin} className={styles.btnUserAdmin}>Admin</button>
                                 </div>

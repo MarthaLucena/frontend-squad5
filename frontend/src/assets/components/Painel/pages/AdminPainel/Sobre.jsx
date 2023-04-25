@@ -1,6 +1,7 @@
 import React from "react";
-import { Table, Button, Form, Modal } from "react-bootstrap";
 import "./Sobre.css";
+
+const itensPorPagina = 3;
 
 class Sobre extends React.Component {
   constructor(props) {
@@ -12,8 +13,31 @@ class Sobre extends React.Component {
       texto: "",
       sobre: [],
       modalAberta: false,
+      paginaAtual: 1
     };
   }
+  
+  paginaAnterior() {
+    const { paginaAtual } = this.state;
+  
+    if (paginaAtual === 1) {
+      return;
+    }
+  
+    this.setState({ paginaAtual: paginaAtual - 1 });
+  }
+  
+  proximaPagina() {
+    const { sobre, paginaAtual } = this.state;
+    const totalPaginas = Math.ceil(sobre.length / itensPorPagina);
+  
+    if (paginaAtual === totalPaginas) {
+      return;
+    }
+  
+    this.setState({ paginaAtual: paginaAtual + 1 });
+  }
+
 
   componentDidMount() {
     this.buscarSobre();
@@ -93,8 +117,14 @@ class Sobre extends React.Component {
   };
 
   renderTabela() {
+    const { sobre, paginaAtual } = this.state;
+    const totalPaginas = Math.ceil(sobre.length / itensPorPagina);
+    const inicio = (paginaAtual - 1) * itensPorPagina;
+    const fim = inicio + itensPorPagina;
+    const itens = sobre.slice(inicio, fim);
+  
     return (
-      <table>
+      <table striped bordered hover>
         <thead>
           <tr>
             <th>ID</th>
@@ -104,7 +134,7 @@ class Sobre extends React.Component {
           </tr>
         </thead>
         <tbody>
-          {this.state.sobre.map((sobre) => {
+          {itens.map((sobre) => {
             return (
               <tr key={sobre.ID}>
                 <td>{sobre.ID}</td>
@@ -191,6 +221,16 @@ class Sobre extends React.Component {
   };
 
   render() {
+    const { currentPage, perPage, sobre } = this.state;
+    const indexOfLastSobre = currentPage * perPage;
+    const indexOfFirstSobre = indexOfLastSobre - perPage;
+    const currentSobre = sobre.slice(indexOfFirstSobre, indexOfLastSobre);
+    
+    const pageNumbers = [];
+    for (let i = 1; i <= Math.ceil(sobre.length / perPage); i++) {
+      pageNumbers.push(i);
+    }
+  
     return (
       <div>
         <>
@@ -242,11 +282,38 @@ class Sobre extends React.Component {
             Novo
           </button>
         </div>
-
+  
         {this.renderTabela()}
+  
+        <div className="pagination">
+          <button
+            className="page-link"
+            onClick={() => this.prevPage()}
+            disabled={currentPage === 1 ? true : false}
+          >
+            Anterior
+          </button>
+          {pageNumbers.map((number) => (
+            <button
+              key={number}
+              className="page-link"
+              onClick={() => this.changePage(number)}
+            >
+              {number}
+            </button>
+          ))}
+          <button
+            className="page-link"
+            onClick={() => this.nextPage()}
+            disabled={currentPage === Math.ceil(sobre.length / perPage) ? true : false}
+          >
+            Próximo
+          </button>
+        </div>
       </div>
     );
   }
+  
 }
 
 export default Sobre;
