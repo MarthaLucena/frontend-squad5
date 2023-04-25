@@ -9,10 +9,12 @@
 	font-size: 16px;
 }
 
+a.linkSemSublinhado {
+	text-decoration: none;
+  }
 
 header {
 	display: flex;
-	position: fixed;
 	align-items: center;
 	justify-content: space-between;
 	top: 0;
@@ -24,7 +26,6 @@ header {
 	padding: 0 30px;
 }
 
-
 nav a {
 	margin: 0 1rem;
 	color: var(--textColor);
@@ -32,8 +33,15 @@ nav a {
 	font-size: 16px;
 	color: #fff;
 	position: relative;
+	text-decoration: none;
     
 }
+
+nav a:hover {
+	text-decoration: none;
+	color:#fff;
+}
+
 
 
 header .nav-btn {
@@ -66,15 +74,16 @@ li {
 	list-style: none;
 }
 
-ul.nav-ul {
+ul.navUl {
 	display: flex;
 	align-items: center;
     color:#FFFF;
 }
 
+
 .logado{
 	margin: 5px;
-	font-size: 12px;
+	text-transform: uppercase;
 }
 
 .fonteLogo {
@@ -109,7 +118,7 @@ ul.nav-ul {
 	}
 
 	li{
-		padding: 20px;
+		padding: 2px;
 	}
 
 	header nav {
@@ -152,4 +161,5 @@ ul.nav-ul {
 		height: 0px;
 	  }
 
+	  
 }

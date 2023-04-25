@@ -6,7 +6,6 @@
 .map {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     width: 100%;
     padding-bottom: 60px;
 }

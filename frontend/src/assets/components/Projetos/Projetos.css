@@ -23,8 +23,8 @@
 }
 
 .proj h1 {
-    font-size: 2rem;
-    color: gray;
+    font-size: 1.8rem;
+    color: var(--titleColor);
     margin: 0 0 0 30px;
 }
 

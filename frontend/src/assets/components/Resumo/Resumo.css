@@ -6,10 +6,11 @@
     align-items: center;
     margin: 0 auto;
     height: fit-content;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
   }
   
-  .linha_resumo {
+  .linha {
     border-left: 2px solid rgb(12, 12, 12);
     height: 400px;
     margin: 0 auto;

@@ -53,6 +53,12 @@
    display: none;
   }
 
+  .linha{
+    width: 300px;
+    border: 1px solid #000000;
+    text-align: center;
+    margin: 10px;
+  }
 
   .form {
     margin: auto;

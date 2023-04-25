@@ -1,4 +1,4 @@
-import { useRef, useStatem, useContext } from "react";
+import { useRef, useState, useContext } from "react";
 import { Link } from 'react-router-dom'
 import { FaBars, FaTimes, FaUser } from "react-icons/fa";
 import "../Navbar/Navbar.css"
@@ -26,9 +26,9 @@ function Navbar() {
 	return (
 
 		<header>
-			<Link to="/"><h3 className="fonteLogo">ALÔ COMUNIDADES</h3></Link>
+			<Link to="/" className="linkSemSublinhado"><h3 className="fonteLogo">ALÔ COMUNIDADES</h3></Link>
 			<nav ref={navRef} className="navPrincipal">
-				<ul className="nav-ul">
+				<ul className="navUl">
 				<li>
 						<Link to="/">HOME</Link>
 					</li>
@@ -44,13 +44,10 @@ function Navbar() {
 					<li>
 						<Link to ="/doe"><button className="doarBtn">DOAR AGORA</button></Link>
 					</li>
-					<li>
 				      {logado ? <Link to="/login"><li className="logado">{Object.keys(infoUsuario).length === 0 ? infoAdmin.username : infoUsuario.username} </li></Link> : <Link to="/login"><li className="logado">Login</li></Link> }
-					</li>
-					/
-					<li>
+					
 				      {logado ? <Link to="/login"><li className="logado" onClick={handleDeslogar}>Sair </li></Link> : <Link to="/Cadastro"><li className="logado">Cadastre-se </li></Link> }
-					</li>
+					
 				</ul>
 				<button
 					className="nav-btn nav-close-btn"

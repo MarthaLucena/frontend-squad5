@@ -18,11 +18,8 @@ function Doacao() {
     return (
         <section className="doarContainer">
             <div className="doarTxt">
-             
+                    <div className="doarH1">
                     <h1>Financie o projeto!</h1>
-              
-                <div className="iconD">
-                    <AiOutlineLine />
                 </div>
 
                 <p>
@@ -51,7 +48,7 @@ function Doacao() {
                         <FaCopy />
                     </button>
                     {copiadoCelular && (
-                        <span className="mensagemSucesso"><FaCheck /> Copiado!</span>
+                        <span className="mensagemSucesso"><FaCheck className/> Copiado!</span>
                     )}
                 </p>
 

@@ -111,8 +111,11 @@ section.moduleContent {
 .lerMaisBtn a {
     text-decoration: none;
     color:  #fff;
-;}
+}
 
+.lerMaisBtn a:hover {
+    color:#fff;
+}
 
 @media only screen and (max-width: 1024px) {
     h4.fundo {
