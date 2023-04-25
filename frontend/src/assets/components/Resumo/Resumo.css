@@ -1,0 +1,42 @@
+.containerInicial {
+    height: 70vh; 
+    display: grid;
+    width: 75%;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  
+  .linha {
+    border-left: 2px solid rgb(12, 12, 12);
+    height: 400px;
+    margin: 0 auto;
+  }
+  .textoInicial {
+    font-size: 1.2rem;
+    margin: 0 auto;
+  }
+
+  .fraseInicial {
+    color: rgb(26, 26, 26);
+    font-size: 2rem; /* Defina o tamanho da fonte desejado */
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+  
+
+  @media screen and (max-width: 1024px) {
+    .containerInicial {
+        display: flex;
+        flex-direction: column;
+    }
+    .linha {
+        display: none;
+    }
+    .fraseInicial{
+        font-size:1.8rem;
+    }
+  }

@@ -64,7 +64,7 @@ const Bairros = () => {
     {
        "titulo": "Jacarezinho",
        "descricao": "O Jacarezinho é um bairro localizado na Zona Norte do Rio de Janeiro, conhecido pela presença de uma das maiores favelas da cidade. Apesar dos problemas sociais, o bairro possui uma forte tradição cultural, sendo um importante centro de produção artística.",
-      "imagem": "./src/assets/img/Bairros/jacarezinho.jpg"
+      "imagem": "./src/assets/img/Bairros/jacarezinho.jpeg"
     },
     {
        "titulo": "Complexo do Alemão",
@@ -74,7 +74,7 @@ const Bairros = () => {
     {
        "titulo": "Complexo da Maré",
        "descricao": "O Complexo da Maré é uma grande região composta por diversas favelas como Parque Maré, Baixa do Sapateiro, Vila do João, entre outras. A região possui uma grande diversidade cultural e é conhecida por ser um importante centro de produção audiovisual.",
-      "imagem": "./src/assets/img/Bairros/mare.jpg"
+      "imagem": "./src/assets/img/Bairros/mare.jpeg"
     },
     {
        "titulo": "Pavuna",
