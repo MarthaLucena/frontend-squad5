@@ -22,7 +22,7 @@
 
   .fraseInicial {
     color: rgb(26, 26, 26);
-    font-size: 2rem; /* Defina o tamanho da fonte desejado */
+    font-size: 2rem; 
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
