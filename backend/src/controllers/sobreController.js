@@ -7,9 +7,9 @@ class sobreController {
         // Rota para o recurso sobre
         app.get('/sobre', sobreController.listar)
         app.post('/sobre', sobreController.inserir)
-        app.get("/sobre/id/:id", sobreController.filtrarPorId)
-        app.delete("/sobre/id/:id", sobreController.apagarSobre)
-        app.put("/sobre/id/:id", sobreController.atualizarSobre)
+        app.get("/sobre/:id", sobreController.filtrarPorId)
+        app.delete("/sobre/:id", sobreController.apagarSobre)
+        app.put("/sobre/:id", sobreController.atualizarSobre)
     }
 
     // GET -- Listar todos
@@ -85,9 +85,7 @@ static async atualizarSobre(req, res) {
         return
     }
 
-    const sobre = new Sobre (
-        req.body.titulo,
-        req.body.texto)
+    const sobre = new Sobre(req.body.titulo, req.body.texto)
 
     if (!sobre || !sobre.titulo || !sobre.texto) {
         res.status(400).send("Precisa passar todas as informações")

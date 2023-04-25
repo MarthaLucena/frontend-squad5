@@ -34,7 +34,7 @@ class UsuarioDAO {
     }
     
     // GET -- BUSCAR POR EMAIL
-    static buscarPorID(id) {
+    static buscarID(id) {
       const query = "SELECT * FROM Usuario WHERE id = ?";
       return new Promise((resolve, reject) => {
         db.get(query, [id], (err, row) => {
@@ -66,18 +66,6 @@ class UsuarioDAO {
       })
     }
 
-    static buscarPorID(id) {
-        const query = "SELECT * FROM Usuario WHERE id = ?";
-        return new Promise((resolve, reject) => {
-          db.get(query, [id], (err, row) => {
-            if (err) {
-              reject(false);
-            }
-            resolve(row);
-          });
-        });
-      }
-
   // PUT  --  
   static atualizar(id, usuario){
     const query =
@@ -103,18 +91,18 @@ class UsuarioDAO {
     });
   }   
 
-    // DELETE -- Deletar um usuário pelo Email
-    static deletar(email){
-        const query = "DELETE FROM Usuario WHERE email = ?";
+    // DELETE -- Deletar um usuário pelo ID
+    static deletar(id){
+        const query = "DELETE FROM Usuario WHERE id = ?";
         return new Promise((resolve,reject) =>{
-          db.run(query, [email], (err) =>{
+          db.run(query, [id], (err) =>{
             if(err){
               reject({
                 mensagem: "Erro ao deletar o seu usuário",
                 erro: err,
               });
             }
-            resolve({mensagem: "Usuário deletado com sucesso", email: email});
+            resolve({mensagem: "Usuário deletado com sucesso", id: id});
           });
         });
       }   

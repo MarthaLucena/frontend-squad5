@@ -7,10 +7,10 @@ class usuarioController {
         // Rota para o recurso usuario
         app.get('/Usuario', usuarioController.listar)
         app.post('/Usuario', usuarioController.inserir)
-        app.get("/Usuario/id/:id", usuarioController.filtrarPorID)
+        app.get("/Usuario/:id", usuarioController.filtrarPorID)
         app.post('/Usuario/login', usuarioController.login)
         app.delete("/Usuario/:id", usuarioController.apagarUsuario)
-        app.put("/Usuario/id/:id", usuarioController.atualizarUsuario)
+        app.put("/Usuario/:id", usuarioController.atualizarUsuario)
     }
     
     // GET -- Listar todos os usuários
@@ -66,7 +66,7 @@ class usuarioController {
 
     // GET -- BUSCAR POR ID
     static async filtrarPorID(req, res){
-        const usuario = await UsuarioDAO.buscarPorID(req.params.id)
+        const usuario = await UsuarioDAO.buscarID(req.params.id)
         if (!usuario) {
             res.status(404).send("Cliente não encontrado")
             return
@@ -77,7 +77,7 @@ class usuarioController {
     
     // DELETE -- Deletar um usuário pelo email
     static async apagarUsuario(req, res){
-       const usuario = await UsuarioDAO.buscarPorEmail(req.params.id)
+       const usuario = await UsuarioDAO.buscarID(req.params.id)
 
        if(!usuario){
            res.status(404).send("Usuário não encontrado")
@@ -93,10 +93,9 @@ class usuarioController {
 
        res.status(200).send(result)
     }
-
     // PUT -- Atualizar um usuário
     static async atualizarUsuario(req, res) {
-        const id = await UsuarioDAO.buscarPorID(req.params.id)
+        const id = await UsuarioDAO.buscarID(req.params.id)
         if (!id) {
             res.status(404).send('usuario não encontrado')
             return
