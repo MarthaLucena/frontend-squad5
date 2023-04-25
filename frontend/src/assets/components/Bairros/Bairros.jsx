@@ -34,37 +34,37 @@ const Bairros = () => {
     {
       "titulo": "Inhaúma",
       "descricao": "Aregião administrativa de Inhaúma abrange os bairros de Engenho da Rainha, Higienópolis, Inhaúma e Tomás Coelho. A região tem uma forte presença de comércio, com diversas lojas, mercados, farmácias, restaurantes e outros estabelecimentos. Também conta com algumas opções de lazer, como o Parque Ary Barroso, que possui quadras esportivas, campo de futebol, pista de skate e playground para crianças. ",
-      "imagem": "./src/assets/img/favela.jpg"
+      "imagem": "./src/assets/img/Bairros/inhauma.jpg"
     },
     {
       "titulo": "Méier",
       "descricao": "A região administrativa do Méier é conhecida por abrigar o Shopping Norte Shopping, além dos bairros de Abolição, Água Santa, Cachambi, Engenho de Dentro, Engenho Novo, Jacaré, Lins de Vasconcelos, Méier, Pilares, Riachuelo, Rocha, Sampaio, São Francisco Xavier, Todos os Santos, Piedade e Encantado.",
-      "imagem": "./src/assets/img/favela.jpg"
+      "imagem": "./src/assets/img/Bairros/meier.jpg"
     },
     {
       "titulo": "Irajá",
       "descricao": "A região administrativa de Irajá abrange os bairros de Colégio, Irajá, Vicente de Carvalho, Vila Kosmos, Vila da Penha e Vista Alegre. Conhecida por seus diversos atrativos culturais e naturais.",
-      "imagem": "./src/assets/img/favela.jpg"
+      "imagem": "./src/assets/img/Bairros/iraja.jpg"
     },
     {
       "titulo": "Madureira",
       "descricao": "A região administrativa de Madureira é conhecida por abrigar o Mercadão de Madureira, além dos bairros de Bento Ribeiro, Campinho, Cascadura, Honório Gurgel, Madureira, Marechal Hermes, Oswaldo Cruz, Quintino Bocaiúva, Rocha Miranda, Vaz Lobo e Turiaçú.",
-      "imagem": "./src/assets/img/favela.jpg"
+      "imagem": "./src/assets/img/Bairros/madureira.jpg"
     },
     {
        "titulo": "Ilha do Governador",
        "descricao": "Localizada na Ilha do Governador, a região é composta pelos bairros Bancários, Cacuia, Cidade Universitária, Cocotá, Freguesia, Galeão, Jardim Carioca, Jardim Guanabara, Moneró, Pitangueiras, Portuguesa, Praia da Bandeira, Tauá, Ribeira e Zumbi.",
-       "imagem": "./src/assets/img/favela.jpg"
+       "imagem": "./src/assets/img/Bairros/ilhagovernador.jpg"
     },
     {
        "titulo": "Anchieta",
        "descricao": "A região de Anchieta é composta pelos bairros de Anchieta, Guadalupe, Parque Anchieta e Ricardo de Albuquerque. É uma das regiões mais populosas da cidade do Rio de Janeiro, com uma grande presença de comércio e serviços.",
-      "imagem": "./src/assets/img/favela.jpg"
+      "imagem": "./src/assets/img/Bairros/anchieta.jpg"
     },
     {
        "titulo": "Jacarezinho",
        "descricao": "O Jacarezinho é um bairro localizado na Zona Norte do Rio de Janeiro, conhecido pela presença de uma das maiores favelas da cidade. Apesar dos problemas sociais, o bairro possui uma forte tradição cultural, sendo um importante centro de produção artística.",
-      "imagem": "./src/assets/img/favela.jpg"
+      "imagem": "./src/assets/img/Bairros/jacarezinho.jpg"
     },
     {
        "titulo": "Complexo do Alemão",
@@ -74,17 +74,17 @@ const Bairros = () => {
     {
        "titulo": "Complexo da Maré",
        "descricao": "O Complexo da Maré é uma grande região composta por diversas favelas como Parque Maré, Baixa do Sapateiro, Vila do João, entre outras. A região possui uma grande diversidade cultural e é conhecida por ser um importante centro de produção audiovisual.",
-      "imagem": "./src/assets/img/favela.jpg"
+      "imagem": "./src/assets/img/Bairros/mare.jpg"
     },
     {
        "titulo": "Pavuna",
        "descricao": "A região da Pavuna é composta pelos bairros de Acari, Barros Filho, Coelho Neto, Costa Barros, Parque Colúmbia e Pavuna. É uma região que possui localização estratégica, próxima a importantes vias expressas como a Avenida Brasil e a Linha Vermelha, o que facilita o acesso a outras partes da cidade. Além disso, o bairro possui uma ampla oferta de comércio e serviços.",
-      "imagem": "./src/assets/img/favela.jpg"
+      "imagem": "./src/assets/img/Bairros/pavuna.jpg"
     },
     {
        "titulo": "Vigário Geral",
        "descricao": "A região de Vigário Geral é composta pelos bairros de Cordovil, Parada de Lucas, Jardim América e Vigário Geral. Conhecida por ser um importante polo de produção cultural e por abrigar a escola de samba Imperatriz Leopoldinense.",
-      "imagem": "./src/assets/img/favela.jpg"
+      "imagem": "./src/assets/img/Bairros/vigariogeral.jpg"
     }
   ];
 
