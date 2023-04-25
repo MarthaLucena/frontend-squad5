@@ -17,10 +17,10 @@ class ContatoDAO {
 
     //POST -- Criar um novo contato
     static inserir(contato) {
-        const query = `INSERT INTO CONTATOS (nome, sobrenome, email, comentario, conceito, data, hora) VALUES (?, ?, ?, ?, ?, ?, ?)`;
+        const query = `INSERT INTO CONTATOS (nome, sobrenome, email, comentario) VALUES (?, ?, ?, ?)`;
 
         return new Promise((resolve, reject) => {
-            db.run(query, [contato.nome, contato.sobrenome, contato.email, contato.comentario, contato.conceito, contato.data, contato.hora], (err) => {
+            db.run(query, [contato.nome, contato.sobrenome, contato.email, contato.comentario], (err) => {
                 if (err) {
                     reject({
                         mensagem: "Erro ao inserir o contato",
@@ -60,11 +60,11 @@ class ContatoDAO {
     //PUT -- Atualização do cadastro
     static atualizar(id, contato){
         const query = 
-        "UPDATE CONTATOS SET nome = ?, sobrenome = ?, email = ?, comentario = ?, conceito = ?, data = ?, hora = ? WHERE id = ?";
+        "UPDATE CONTATOS SET nome = ?, sobrenome = ?, email = ?, comentario = ? WHERE id = ?";
         return new Promise ((resolve, reject) =>{
             db.run(
                 query,
-                [contato.nome, contato.sobrenome, contato.email, contato.comentario, contato.conceito, contato.data, contato.hora, id],
+                [contato.nome, contato.sobrenome, contato.email, contato.comentario, id],
             (err) =>{
                 if (err){
                     reject({
