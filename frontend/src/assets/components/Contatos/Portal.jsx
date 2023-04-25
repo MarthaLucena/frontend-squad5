@@ -1,38 +1,44 @@
 import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
-import { useState } from 'react';
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Portal.css";
 
 export default function Portal() {
-  const [contato, setContatos] = useState(true);
   const [nome, setNome] = useState("");
   const [sobrenome, setSobrenome] = useState("");
   const [email, setEmail] = useState("");
   const [comentario, setComentario] = useState("");
 
-  // Função para enviar o formulario
-  async function handleSubmitContato(event) {
-    event.preventDefault();
-    setTimeout(() => {
-      window.location.reload();
-    }, 500);
-    const formData = { nome, sobrenome, email, comentario };
+  const postData = () => {
+    axios.post(`http://localhost:3000/Contato`, {
+      nome,
+      sobrenome,
+      email,
+      comentario
+    });
+  };
 
-    try {
-      const response = await fetch("http://localhost:3000/Contatos", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      const data = await response.json();
-      console.log(data);
-      alert("Mensagem Enviada com sucesso, Aguarda um retorno!");
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  const [form, setForm] = useState({
+    nome: "",
+    sobrenome: "",
+    email: "",
+    comentario: ""
+  });
+
+  const [emptyValue, SetEmptyValue] = useState(false);
+
+  const handleChange = (e) => {
+    let newProp = form;
+    newProp[e.target.name] = e.targe.value;
+    setForm({ ...newProp });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    let emptyValues = Object.values(form).some((obj) => obj == "");
+    SetEmptyValue(emptyValues);
+  };
 
   return (
     <>
@@ -58,22 +64,57 @@ export default function Portal() {
               </i>
             </ul>
           </div>
-          <form className="form" onSubmit={handleSubmitContato}>
+          <form
+            className="form"
+            onSubmit={(e) => {
+              handleSubmit(e);
+            }}
+          >
             <div className="subtitulo-form">
               <h2>CONTATE-NOS</h2>
             </div>
             <div className="form-box">
-              <input type="text" placeholder="Nome" required value={nome} onChange={(event) => setNome(event.target.value)} />
-              <input type="text" placeholder="Sobrenome" required value={sobrenome} onChange={(event) => setSobrenome(event.target.value)} />
-              <input type="text" placeholder="E-mail" required value={email} onChange={(event) => setEmail(event.target.value)} />
+              <input
+                type="text"
+                name='nome'
+                placeholder="Nome"
+                required
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+                onBlur={(e) => handleChange(e)}
+              />
+              <input
+                type="text"
+                placeholder="Sobrenome"
+                name='sobrenome'
+                required
+                value={sobrenome}
+                onChange={(e) => setSobrenome(e.target.value)}
+                onBlur={(e) => handleChange(e)}
+              />
+              <input
+                type="text"
+                placeholder="E-mail"
+                name='email'
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                onBlur={(e) => handleChange(e)}
+              />
               <textarea
                 placeholder="Digite sua mensagem..."
                 cols="30"
                 rows="5"
-                required value={comentario} onChange={(event) => setComentario(event.target.value)} 
-              ></textarea>
+                name='comentario'
+                required
+                value={comentario}
+                onChange={(e) => setComentario(e.target.value)}
+                onBlur={(e) => handleChange(e)}
+              >{emptyValue && form["nome"] ? <span className="emptyText">O campo precisa ser preenchido</span> : ""}</textarea>
               <div className="button-form">
-                <button role="button">Enviar Mensagem</button>
+                <button type="submit" onClick={postData}>
+                  Enviar Mensagem
+                </button>
               </div>
             </div>
           </form>
