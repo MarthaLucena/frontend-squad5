@@ -4,13 +4,15 @@ import grafite from "../../img/grafite.jpg"
 import escada from "../../img/escada.jpg"
 
 
-const Projetos = () => {
+const Projetos = ({ data }) => {
+    const item = data.filter(sobre => sobre.ID === 5)[0];
+    const { TITULO, TEXTO } = item || {};
     return (
         <section className="projetos">
             <div className="proj">
-                <h1>Projetos</h1>
+                <h1>{TITULO}</h1>
                 <div className="iconP"> <AiOutlineLine /> </div>
-                <p>Um projeto que fornece informações sobre os direitos humanos pode ajudar a aumentar a conscientização sobre questões importantes, como a discriminação e a violência. Isso pode levar a uma maior tolerância e respeito entre os membros da comunidade, além de ajudar a prevenir e combater atos de violência e discriminação. </p>
+                <p>{TEXTO}</p>
             </div>
             <div className="imgPro">
                 <div className="escada">

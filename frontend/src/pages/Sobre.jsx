@@ -7,18 +7,29 @@ import Missao from "../assets/components/Missao/Missao"
 import Navbar from "../assets/components/Navbar/Navbar"
 import Noticias from "../assets/components/Noticias/Noticias"
 import Projetos from "../assets/components/Projetos/Projetos"
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 function Sobre () {
+    const [sobre, setSobre] = useState([]);
+    const ID="";
+
+    useEffect(() => {
+        axios.get('http://localhost:3000/sobre')
+          .then(response => setSobre(response.data))
+          .catch(error => console.log(error));
+      
+      }, [ID]);
+
     return(
         <div>
             <Navbar />
-            <Banner />
-            <Historia />
-            <Missao />
-            <Noticias />
-            <Impacto />
-            <Projetos />
-            <Comunidades />
+            <Historia data={sobre} />
+            <Missao data={sobre} />
+            <Noticias data={sobre}/>
+            <Impacto data={sobre}/>
+            <Projetos data={sobre}/>
+            <Comunidades data={sobre}/>
             <Footer />
 
         </div>

@@ -4,16 +4,18 @@ import favela6 from "../../img/favela6.jpeg"
 import favela7 from "../../img/favela7.jpg"
 
 
-const Noticias = () => {
+const Noticias = ({data}) => {
+    const item = data.filter(sobre => sobre.ID === 3)[0];
+    const { TITULO, TEXTO } = item || {};
+
     return (
         <section className="noticias">
 
             <div className="notic">
-                <h1>Notícias</h1>
+            <h1>{TITULO}</h1>
                 <div className="iconN"> <AiOutlineLine /> </div>
-                <p>As notícias são publicadas por nossos administradores, que também são moradores. Ou seja, é de morador para morador. Você fala, nós escutamos. Nós falamos, mais moradores ficam informados.
-                    Acreditamos que ao fornecer informações de qualidade e empoderar as pessoas com o conhecimento, podemos contribuir para a melhoria da qualidade de vida das comunidades e para o desenvolvimento sustentável da sociedade como um todo. Por isso, estamos comprometidos com a nossa missão e trabalhamos diariamente para atingir nossos objetivos e levar informação para aqueles que mais precisam.
-                </p>
+                <p>{TEXTO}</p>
+
             </div>
             <div className="imagesNot">
                 <div className="favela6">
