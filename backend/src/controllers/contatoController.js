@@ -23,14 +23,10 @@ class contatoController {
             nome: req.body.nome,
             sobrenome: req.body.sobrenome,
             email: req.body.email,
-            comentario: req.body.comentario,
-            conceito: req.body.conceito,
-            data: req.body.data,
-            hora: req.body.hora,
+            comentario: req.body.comentario
         }
 
-        if (!contato || !contato.nome || !contato.sobrenome || !contato.email || !contato.comentario ||
-            !contato.conceito || !contato.data || !contato.hora) {
+        if (!contato || !contato.nome || !contato.sobrenome || !contato.email || !contato.comentario) {
             res.status(400).send("Precisa passar as informações")
             return
         }
@@ -86,13 +82,9 @@ class contatoController {
             req.body.nome, 
             req.body.sobrenome, 
             req.body.email, 
-            req.body.comentario, 
-            req.body.conceito, 
-            req.body.data, 
-            req.body.hora)
+            req.body.comentario)
 
-        if (!contato || !contato.nome || !contato.sobrenome || !contato.email || !contato.comentario ||
-            !contato.conceito || !contato.data || !contato.hora){
+        if (!contato || !contato.nome || !contato.sobrenome || !contato.email || !contato.comentario ){
                 res.status(400).send("Precisa passar todas as informações")
                 return
             }

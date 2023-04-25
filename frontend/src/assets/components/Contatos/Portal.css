@@ -1,11 +1,11 @@
 .titulo-form {
   text-align: center;
-  margin-top: 30px;
   padding-bottom: 50px;
 }
 
 .box-form {
-  background-color: #cdcece;
+  background-color: #0099ff;
+  border-radius: 5px;
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -23,9 +23,10 @@
 }
 
 .form {
-  background-color: #fff;
+  background-color: #ffffff86;
   padding: 20px;
   width: 400px;
+  border-radius: 5px
 }
 
 .form > .form-box {
@@ -41,7 +42,7 @@ label {
   border: 0 none;
   border-radius: 5px;
   margin: 5px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .form-box > input,
@@ -52,7 +53,7 @@ button{
 
 .form-box > input,
 textarea {
-  background-color: #cdcece;
+  background-color: #fff;
 }
 
 .conceito {
@@ -63,7 +64,9 @@ textarea {
 .button-form > button {
   background-color: #efc900;
   padding: 5px;
-  width: 80px;
+  width: 100%;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {

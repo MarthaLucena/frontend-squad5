@@ -17,11 +17,6 @@ footer > h1 {
   margin-bottom: 30px;
 }
 
-.box-footer{
-  display: flex;
-  justify-content: space-around;
-}
-
 div > .box-collum {
   display: flex;
   flex-direction: column;
@@ -46,5 +41,5 @@ div > ul > a{
   text-align: center;
   padding: 10px;
   margin-top: 30px;
-  background-color: #2e2e2e;
+
 }

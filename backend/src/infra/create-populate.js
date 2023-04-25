@@ -99,16 +99,13 @@ CREATE TABLE IF NOT EXISTS "CONTATOS" (
 "NOME" varchar(64),
 "SOBRENOME" varchar(64),
 "EMAIL" varchar(64),
-"COMENTARIO" varchar(64),
-"CONCEITO" varchar(64),
-"DATA" varchar(64),
-"HORA" varchar(64)
+"COMENTARIO" varchar(64)
 )`;
 
 const ADD_CONTATOS_DATA = `
-INSERT INTO CONTATOS (NOME, SOBRENOME, EMAIL, COMENTARIO, CONCEITO, DATA, HORA)
+INSERT INTO CONTATOS (NOME, SOBRENOME, EMAIL, COMENTARIO)
 VALUES
-    ('Anderson', 'Vasco', 'caiujacaiu@gmail.com', 'TESTE DE COMENTARIO' , '5' , '17/04/2023', '21:05')
+    ('Anderson', 'Vasco', 'caiujacaiu@gmail.com', 'TESTE DE COMENTARIO')
 `;
 
 function criaTabelaContato() {
