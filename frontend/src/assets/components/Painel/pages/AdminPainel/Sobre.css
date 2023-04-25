@@ -1,0 +1,248 @@
+table {
+  width: 100vw;
+  border-collapse: collapse;
+  margin: 20px 0px;
+  font-size: 1em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 12px 15px;
+}
+
+thead {
+  background-color: #d4d2d2;
+  color: #302f2f;
+  text-align: left;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+tbody td {
+  border-bottom: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  position: relative;
+}
+
+tbody td:last-child {
+  border-right: none;
+}
+
+tbody td:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  width: 100%;
+  height: 10px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+tbody tr:last-child td:before {
+  display: none;
+}
+
+tbody td:last-child:before {
+  width: calc(100% + 1px);
+  border-right: 1px solid #dddddd;
+}
+
+.textarea {
+  width: 100%;
+  height: 300px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.Btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.novo {
+  padding: 10px;
+  width: 70px;
+  height: 40px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-right: 10px;
+}
+
+.BtnAtualizar {
+  position: relative;
+  font-family: "Heebo", sans-serif;
+  padding: 12px 20px;
+  border: 0;
+  background: rgb(223, 222, 222);
+  color: #383838;
+  font-weight: 500;
+  font-size: 1em;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.BtnExcluir {
+  position: relative;
+  font-family: "Heebo", sans-serif;
+  padding: 12px 20px;
+  border: 0;
+  background: rgb(240, 94, 94);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1em;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.form-sobre {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.form-sobre label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-sobre input[type="text"],
+.form-sobre input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.form-sobre button[type="submit"] {
+  padding: 10px;
+  width: 70px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-right: 10px;
+}
+
+.form-sobre button[type="submit"]:hover {
+  background-color: #0062cc;
+}
+
+/* Estilizando o modal */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 4px;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h2 {
+  margin-top: 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-right: 10px;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  table {
+    min-width: auto;
+    font-size: 0.8em;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  .Btns {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .btnNovo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .novo {
+    width: 20%;
+    margin: 10px 0;
+  }
+
+  .BtnAtualizar,
+  .BtnExcluir {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .form-sobre button[type="submit"] {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+}

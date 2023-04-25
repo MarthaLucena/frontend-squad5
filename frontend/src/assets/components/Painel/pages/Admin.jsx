@@ -7,12 +7,12 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Home from "./AdminPainel/Home";
 import Usuario from "./AdminPainel/Usuario";
 import Administrador from "./AdminPainel/Administrador";
+import Sobre from "./AdminPainel/Sobre";
 
 function PerfilAdmin() {
   return (
     <>
       <div className={styles.painel}>
-        <h1>Meu Painel</h1>
         <Router>
             <ul className={styles.menuList}>
               <li className={styles.menuItem}>
@@ -28,6 +28,11 @@ function PerfilAdmin() {
               <li className={styles.menuItem}>
                 <Link to="/Usuario" className={styles.menuLink}>
                   Usuario
+                </Link>
+              </li>
+              <li className={styles.menuItem}>
+                <Link to="/Sobre" className={styles.menuLink}>
+                  Sobre
                 </Link>
               </li>
             </ul>
@@ -47,6 +52,11 @@ function PerfilAdmin() {
             <Route path="/Usuario">
               <Usuario />
             </Route>
+
+            <Route path="/Sobre">
+              <Sobre />
+            </Route>
+
           </Switch>
         </Router>
       </div>

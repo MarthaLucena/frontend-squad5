@@ -1,5 +1,5 @@
 .painel {
-    margin: 100px;
+    padding-top: 100px;
 }
 
 .menu {
@@ -23,10 +23,6 @@
     padding: 0;
   }
   
-  .menuItem:hover {
-    border-bottom-color: #007bff;
-  }
-  
   .menuLink {
     display: block;
     padding: 12px 15px;
@@ -38,6 +34,15 @@
   }
   
   .menuLink:hover {
-    color: #007bff;
+    color: #a1a1a1;
   }
   
+  @media screen and (max-width: 1040px) {
+    .menuList{
+      display: flex;
+      flex-direction: row;
+    }
+    .menuLink{
+      font-size: 70%;
+    }
+  }

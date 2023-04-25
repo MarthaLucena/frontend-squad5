@@ -17,7 +17,7 @@ function Painel() {
 
     useEffect(() => {
         // verificar se o usuário logado tem perfil de administrador
-        if (logado && infoAdmin) {
+        if (logado && infoAdmin && infoAdmin.isAdmin) {
             setUsuario(false);
         }
     }, [logado, infoAdmin])
@@ -96,18 +96,45 @@ function Painel() {
     }
 
     function handleAdmin() {
-        setUsuario(false);
+        setUsuario(true);
     }
     function handleUsuario() {
-        setUsuario(true);
+        setUsuario(false);
     }
 
     return (
         <>
             <div className={styles.container}>
-                {usuario && infoUsuario ?
+                {usuario ?
+                      <>
+                        {logado && infoAdmin ?
+                            <PerfilAdmin />
+                            :
+
+                            <div className={styles.containerLogin}>
+                                <h1>Admin</h1>
+                                <div className={styles.btnCE}>
+                                    <button  onClick={handleUsuario} className={styles.btnUserAdmin}>Cliente</button>
+                                </div>
+                                <form className={styles.form} onSubmit={handleSubmitAdmin}>
+                                    <label>Email</label>
+                                    <input type="email" placeholder="Digite seu email" value={email} onChange={(event) => setEmail(event.target.value)} />
+                                    <div className={styles.label}>
+                                        <label>Senha</label>
+                                        <Link to="/" className={styles.link}><label style={{cursor: "pointer", color: "black"}}>Recuperar Senha</label></Link>
+                                    </div>
+                                    <input type="password" placeholder="Digite sua senha" value={password} onChange={(event) => setSenha(event.target.value)} />
+                                    {errorMsg && <h5 className={styles.errorMsg}>{errorMsg}</h5>}
+                                    <div className={styles.btnAdmin}>
+                                    <button role='button'>Logar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        }
+                    </>
+                     :
                     <>
-                        {logado ?
+                        {logado && !infoAdmin.isAdmin ?
                               <PerfilUser />
 
                             :
@@ -134,33 +161,7 @@ function Painel() {
                             </div>
                         }
                     </>
-                    :
-                    <>
-                        {logado && infoUsuario ?
-                            <PerfilAdmin />
-                            :
-
-                            <div className={styles.containerLogin}>
-                                <h1>Admin</h1>
-                                <div className={styles.btnCE}>
-                                    <button  onClick={handleUsuario} className={styles.btnUserAdmin}>Cliente</button>
-                                </div>
-                                <form className={styles.form} onSubmit={handleSubmitAdmin}>
-                                    <label>Email</label>
-                                    <input type="email" placeholder="Digite seu email" value={email} onChange={(event) => setEmail(event.target.value)} />
-                                    <div className={styles.label}>
-                                        <label>Senha</label>
-                                        <Link to="/" className={styles.link}><label style={{cursor: "pointer", color: "black"}}>Recuperar Senha</label></Link>
-                                    </div>
-                                    <input type="password" placeholder="Digite sua senha" value={password} onChange={(event) => setSenha(event.target.value)} />
-                                    {errorMsg && <h5 className={styles.errorMsg}>{errorMsg}</h5>}
-                                    <div className={styles.btnAdmin}>
-                                    <button role='button'>Logar</button>
-                                    </div>
-                                </form>
-                            </div>
-                        }
-                    </>
+                
                 }
 
             </div>

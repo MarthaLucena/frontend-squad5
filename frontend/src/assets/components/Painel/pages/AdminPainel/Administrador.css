@@ -1,12 +1,13 @@
 table {
-    width: 100%;
+    width: 100vw;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 20px 0px;
     font-size: 1em;
     min-width: 400px;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
   }
   
   th,
@@ -15,8 +16,8 @@ table {
   }
   
   thead {
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: #d4d2d2;
+    color: #302f2f;
     text-align: left;
     font-weight: bold;
   }
@@ -59,6 +60,10 @@ table {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+  }
+
+  .Btns button{
+    margin-right: 10px;
   }
 
 .novo {
@@ -200,34 +205,51 @@ table {
   button:last-child {
     margin-right: 0;
   }
+
   
-  
-  
-  
-  @media only screen and (max-width: 700px) {
+  @media screen and (max-width: 768px) {
     table {
-      font-size: 0.8em;
+    min-width: auto;
+    font-size: 0.8em;
     }
     
-    thead {
-      display: none;
+    th,
+    td {
+    padding: 8px;
     }
     
-    tbody tr {
-      border-bottom: 3px solid #dddddd;
-      display: block;
-      margin-bottom: 5px;
+    .Btns {
+    justify-content: center;
+    margin-top: 10px;
+    }
+
+    .Btns button {
+      width: 100px;
+    }
+
+    .btnNovo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     
-    tbody td:before {
-      content: attr(data-label);
-      float: left;
-      font-weight: bold;
-      text-transform: uppercase;
+    .novo{
+      width: 20%;
+      margin: 10px 0;
+    }
+
+    .BtnAtualizar,
+    .BtnExcluir {
+    width: 100%;
+    margin: 10px 0;
     }
     
-    tbody td:last-child {
-      border-bottom: 0;
+    .form-container button[type="submit"] {
+    width: 100%;
+    margin-top: 10px;
     }
-  }
-  
+    
+    .modal-content {
+    width: 90%;
+    }
+    }

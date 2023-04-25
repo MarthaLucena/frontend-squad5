@@ -97,7 +97,7 @@ class Administrador extends React.Component {
 
   renderTabela() {
     return (
-      <Table>
+      <table>
         <thead>
           <tr>
             <th>ID</th>
@@ -114,24 +114,24 @@ class Administrador extends React.Component {
                 <td>{admin.username}</td>
                 <td>{admin.email}</td>
                 <td>
-                  <Button
+                  <button
                     className="BtnAtualizar"
                     onClick={() => this.carregarAdmin(admin.ID)}
                   >
                     Atualizar
-                  </Button>
-                  <Button
+                  </button>
+                  <button
                     className="BtnExcluir"
                     onClick={() => this.deletarAdmin(admin.ID)}
                   >
                     Excluir
-                  </Button>
+                  </button>
                 </td>
               </tr>
             );
           })}
         </tbody>
-      </Table>
+      </table>
     );
   }
 
@@ -173,7 +173,7 @@ class Administrador extends React.Component {
 
       this.atualizarAdmin(admin);
     }
-    this.fecharModal(event)
+    this.fecharModal(event);
   };
 
   reset = (event) => {
@@ -213,12 +213,7 @@ class Administrador extends React.Component {
                 <span className="close" onClick={this.fecharModal}>
                   &times;
                 </span>
-                <h2>Modal heading</h2>
                 <form class="form-container">
-                  <label>
-                    ID:
-                    <input type="text" value={this.state.id} readOnly={true} />
-                  </label>
                   <label>
                     Nome:
                     <input
@@ -248,18 +243,26 @@ class Administrador extends React.Component {
                   <br />
                 </form>
                 <div className="Btns">
-                  <button className="novo" type="submit" onClick={this.fecharModal}>Fechar</button>
+                  <button
+                    className="novo"
+                    type="submit"
+                    onClick={this.fecharModal}
+                  >
+                    Fechar
+                  </button>
                   <button className="novo" type="submit" onClick={this.submit}>
-                      Enviar
-                    </button>
+                    Enviar
+                  </button>
                 </div>
               </div>
             </div>
           )}
         </>
+        <div className="btnNovo">
           <button className="novo" type="submit" onClick={this.abrirModal}>
             Novo
           </button>
+        </div>
 
         {this.renderTabela()}
       </div>

@@ -1,42 +1,42 @@
 import React from "react";
 import { Table, Button, Form, Modal } from "react-bootstrap";
+import "./Sobre.css";
 
-class Usuario extends React.Component {
+class Sobre extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       id: 0,
-      username: "",
-      email: "",
-      password: "",
-      usuario: [],
+      titulo: "",
+      texto: "",
+      sobre: [],
       modalAberta: false,
     };
   }
 
   componentDidMount() {
-    this.buscarUsuario();
+    this.buscarSobre();
   }
 
   componentWillUnmount() {}
 
-  buscarUsuario() {
-    fetch("http://localhost:3000/Usuario/")
+  buscarSobre() {
+    fetch("http://localhost:3000/Sobre/")
       .then((res) => res.json())
       .then((dados) => {
-        this.setState({ usuario: dados });
+        this.setState({ sobre: dados });
       });
   }
 
-  deletarUsuario = (id) => {
-    fetch("http://localhost:3000/Usuario/" + id, { method: "DELETE" })
+  deletarSobre = (id) => {
+    fetch("http://localhost:3000/Sobre/" + id, { method: "DELETE" })
       .then((res) => {
         console.log(res.status);
         if (res.ok) {
-          this.buscarUsuario();
+          this.buscarSobre();
         } else {
-          throw new Error("Erro ao excluir usuario");
+          throw new Error("Erro ao excluir sobre");
         }
       })
       .catch((err) => {
@@ -44,48 +44,46 @@ class Usuario extends React.Component {
       });
   };
 
-  carregarUsuario = (id) => {
-    fetch("http://localhost:3000/Usuario/" + id, { method: "GET" })
+  carregarSobre = (id) => {
+    fetch("http://localhost:3000/Sobre/" + id, { method: "GET" })
       .then((resposta) => resposta.json())
-      .then((usuario) => {
+      .then((sobre) => {
         this.setState({
-          id: usuario.ID,
-          username: usuario.username,
-          email: usuario.email,
-          password: usuario.password,
+          id: sobre.ID,
+          titulo: sobre.TITULO,
+          texto: sobre.TEXTO,
         });
         this.abrirModal();
       });
   };
 
-  atualizarUsuario = (usuario) => {
-    fetch("http://localhost:3000/Usuario/" + usuario.id, {
+  atualizarSobre = (sobre) => {
+    fetch("http://localhost:3000/Sobre/" + sobre.id, {
       method: "PUT",
       headers: { "Content-type": "application/json" },
-      body: JSON.stringify(usuario),
+      body: JSON.stringify(sobre),
     }).then((res) => {
       if (res.ok) {
-        this.buscarUsuario();
+        this.buscarSobre();
       } else {
-        console.error("Erro ao atualizar o usuario:", res.status, res.statusText);
+        console.error("Erro ao atualizar o sobre:", res.status, res.statusText);
       }
     });
   };
 
-  cadastraUsuario = (usuario) => {
-    fetch("http://localhost:3000/Usuario", {
+  cadastraSobre = (sobre) => {
+    fetch("http://localhost:3000/Sobre", {
       method: "POST",
       headers: { "Content-type": "application/json" },
-      body: JSON.stringify(usuario),
+      body: JSON.stringify(sobre),
     })
       .then((res) => {
         console.log(res.status);
         if (res.ok) {
-          this.buscarUsuario();
+          this.buscarSobre();
           this.setState({
-            username: "",
-            email: "",
-            password: "",
+            titulo: "",
+            texto: "",
           });
         }
       })
@@ -100,28 +98,28 @@ class Usuario extends React.Component {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Nome</th>
-            <th>Email</th>
+            <th>Título</th>
+            <th>Texto</th>
             <th>Opções</th>
           </tr>
         </thead>
         <tbody>
-          {this.state.usuario.map((usuario) => {
+          {this.state.sobre.map((sobre) => {
             return (
-              <tr key={usuario.ID}>
-                <td>{usuario.ID}</td>
-                <td>{usuario.username}</td>
-                <td>{usuario.email}</td>
+              <tr key={sobre.ID}>
+                <td>{sobre.ID}</td>
+                <td>{sobre.TITULO}</td>
+                <td className="texto">{sobre.TEXTO}</td>
                 <td>
                   <button
                     className="BtnAtualizar"
-                    onClick={() => this.carregarUsuario(usuario.ID)}
+                    onClick={() => this.carregarSobre(sobre.ID)}
                   >
                     Atualizar
                   </button>
                   <button
                     className="BtnExcluir"
-                    onClick={() => this.deletarUsuario(usuario.ID)}
+                    onClick={() => this.deletarSobre(sobre.ID)}
                   >
                     Excluir
                   </button>
@@ -134,43 +132,35 @@ class Usuario extends React.Component {
     );
   }
 
-  atualizaUsername = (e) => {
+  atualizaTitulo = (e) => {
     this.setState({
-      username: e.target.value,
+      titulo: e.target.value,
     });
   };
 
-  atualizaEmail = (e) => {
+  atualizaTexto = (e) => {
     this.setState({
-      email: e.target.value,
-    });
-  };
-
-  atualizaSenha = (e) => {
-    this.setState({
-      password: e.target.value,
+      texto: e.target.value,
     });
   };
 
   submit = (event) => {
     event.preventDefault(); // impede que o comportamento padrão de submissão do formulário ocorra
     if (this.state.id == 0) {
-      const usuario = {
-        username: this.state.username,
-        email: this.state.email,
-        password: this.state.password,
+      const sobre = {
+        titulo: this.state.titulo,
+        texto: this.state.texto,
       };
 
-      this.cadastraUsuario(usuario);
+      this.cadastraSobre(sobre);
     } else {
-      const usuario = {
+      const sobre = {
         id: this.state.id,
-        username: this.state.username,
-        email: this.state.email,
-        password: this.state.password,
+        titulo: this.state.titulo,
+        texto: this.state.texto,
       };
 
-      this.atualizarUsuario(usuario);
+      this.atualizarSobre(sobre);
     }
     this.fecharModal(event);
   };
@@ -179,9 +169,8 @@ class Usuario extends React.Component {
     event.preventDefault();
     this.setState({
       id: 0,
-      username: "",
-      email: "",
-      password: "",
+      titulo: "",
+      texto: "",
     });
   };
 
@@ -190,9 +179,8 @@ class Usuario extends React.Component {
     this.setState({
       modalAberta: false,
       id: 0,
-      username: "",
-      email: "",
-      password: "",
+      titulo: "",
+      texto: "",
     });
   };
 
@@ -212,31 +200,23 @@ class Usuario extends React.Component {
                 <span className="close" onClick={this.fecharModal}>
                   &times;
                 </span>
-                <form class="form-container">
+                <form class="form-sobre">
                   <label>
-                    Nome:
+                    Titulo:
                     <input
                       type="text"
-                      value={this.state.username}
-                      onChange={this.atualizaUsername}
+                      value={this.state.titulo}
+                      onChange={this.atualizaTitulo}
                     />
                   </label>
                   <br />
                   <label>
-                    Email:
-                    <input
+                    Texto:
+                    <textarea
+                      className="textarea"
                       type="email"
-                      value={this.state.email}
-                      onChange={this.atualizaEmail}
-                    />
-                  </label>
-                  <br />
-                  <label>
-                    Senha:
-                    <input
-                      type="password"
-                      value={this.state.password}
-                      onChange={this.atualizaSenha}
+                      value={this.state.texto}
+                      onChange={this.atualizaTexto}
                     />
                   </label>
                   <br />
@@ -269,4 +249,4 @@ class Usuario extends React.Component {
   }
 }
 
-export default Usuario;
+export default Sobre;

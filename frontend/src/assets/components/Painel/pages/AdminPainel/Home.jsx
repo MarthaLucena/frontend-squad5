@@ -95,19 +95,19 @@ function Home() {
         <div className={styles.containerDireito}>
           <div className={styles.totalizadores}>
             <div className={styles.totalizador}>
-              <p>Total de Usuários</p>
+              <p>Usuários</p>
               <p>{totalUsuarios}</p>
             </div>
             <div className={styles.totalizador}>
-              <p>Total de Notícias</p>
+              <p>Notícias</p>
               <p>{totalNoticias}</p>
             </div>
             <div className={styles.totalizador}>
-              <p>Total de Parceiros</p>
+              <p>Parceiros</p>
               <p>{totalParceiros}</p>
             </div>
             <div className={styles.totalizador}>
-              <p>Total de Imagens</p>
+              <p>Imagens</p>
               <p>{totalImagens}</p>
             </div>
           </div>
