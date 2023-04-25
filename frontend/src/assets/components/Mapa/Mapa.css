@@ -18,6 +18,8 @@
     margin-left: 4%;
     padding-left: 2%;
     padding-bottom: 20px;
+    font-size:1.7rem;
+    color:var(--titleColor)
     
 }
 

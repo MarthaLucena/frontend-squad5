@@ -24,8 +24,8 @@
 }
 
 .impac h1 {
-    font-size: 2rem;
-    color: gray;
+    font-size:1.7rem;
+    color: var(--titleColor);
     margin: 0 0 0 30px;
 }
 

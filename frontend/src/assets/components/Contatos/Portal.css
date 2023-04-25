@@ -3,6 +3,9 @@
   padding-bottom: 50px;
 }
 
+.titulo-form h1 {
+  font-size:1.7rem;
+}
 .box-form {
   background-color: #0099ff;
   border-radius: 5px;
