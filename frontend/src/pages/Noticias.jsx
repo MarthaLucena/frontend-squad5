@@ -1,15 +1,16 @@
-import Banner from "../assets/components/Banner/Banner";
 import Navbar from "../assets/components/Navbar/Navbar";
 import Principal from "../assets/components/Noticias/Principal";
+import Secundaria from "../assets/components/Noticias/CardNoticia/Cards";
 import Footer from "../assets/components/Footer/Footer";
 
 function Noticias() {
   return (
-    <div>
+    <body>
       <Navbar />
       <Principal/>
+      <Secundaria/>
       <Footer />
-    </div>
+    </body>
   );
 }
 

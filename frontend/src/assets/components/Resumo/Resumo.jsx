@@ -7,7 +7,7 @@ function Resumo() {
                     Vamos espalhar a esperança e o otimismo sobre o futuro da ZN <strong>juntos.</strong>
                 </p>
             </div>
-            <div className="linha">
+            <div className="linha_resumo">
 
             </div>
             <div className="textoInicial">

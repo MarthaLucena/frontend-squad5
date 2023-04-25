@@ -1,0 +1,113 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width:75%;
+    padding-bottom: 60px;
+}
+
+.card {
+    border: 2px solid rgb(189, 188, 188);
+    border-width: thin;
+    text-align: center;
+}
+
+.title {
+    color: rgb(41, 41, 41);
+    font-size: 20px;
+}
+
+h2.cardGroupTitle {
+    padding-left: 2%;
+}
+
+.cardContent {
+    padding: 15px;
+}
+
+.cardImg {
+    width: 350px;
+    height: 200px;
+}
+
+.img {
+
+    position: relative;
+}
+.cardLabel {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #FFFF;
+        font-weight: bold;
+        padding: 1px 5px;
+        border-radius: 10px;
+    }
+
+.cardGroup {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.date {
+    display: flex;
+    justify-content: right;
+    font-weight: bold;
+}
+
+.icons {
+    text-align: left;
+    display: flex;
+    gap: 10px;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .cardGroup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and  (max-width: 768px) {
+    .cardGroup {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    }
+    .cards{
+        width: fit-content;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+
+}
+
+
+.cardLabelEsporte {
+    background-color: #fc006d;
+
+}
+
+.cardLabelEducacao{
+    background-color: #3990FB;
+}
+
+.cardLabelEventos {
+    background-color: #e4831a;
+}
+
+.cardLabelPadrao {
+    background-color: #a23fe3;
+}
+
+.cardImg {
+    width:fit-content;
+}
