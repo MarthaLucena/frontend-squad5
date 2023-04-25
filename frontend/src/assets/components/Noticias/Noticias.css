@@ -52,3 +52,28 @@
 .favela7{
     margin-top: 20px;
 }
+@media screen and (max-width: 1300px) {
+    .noticias{
+        display: flex;
+        flex-direction: column;
+    }
+    .notic{
+        width: 80%;
+        margin-top: 45px;
+    }
+    .imagesNot img{
+        border-radius: 30px
+    }
+   }
+   @media screen and (max-width: 900px){
+    .imagesNot{
+        flex-direction: column;
+    }
+    .imagesNot img{
+        margin: 0;
+        width: 300px;
+        height: 300px;
+    }
+    
+ }
+
