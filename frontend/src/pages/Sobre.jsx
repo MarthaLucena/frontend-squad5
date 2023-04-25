@@ -1,4 +1,4 @@
-import Banner from "../assets/components/Banner/Banner"
+
 import Comunidades from "../assets/components/Comunidades/Comunidades"
 import Footer from "../assets/components/Footer/Footer"
 import Historia from "../assets/components/Historia/Historia"
@@ -12,7 +12,7 @@ function Sobre () {
     return(
         <div>
             <Navbar />
-            <Banner />
+
             <Historia />
             <Missao />
             <Noticias />

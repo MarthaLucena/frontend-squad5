@@ -54,6 +54,7 @@
 
     .imageMiss img {
         border-radius: 50%;
+        box-shadow: 2px 2px 5px 1px rgba(129, 117, 117, 0.699);
     }
 }
 

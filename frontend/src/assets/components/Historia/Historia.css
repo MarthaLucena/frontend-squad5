@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
 }
 
@@ -29,6 +28,7 @@
     background-color: white;
     display: flex;
     align-items: center;
+    margin-top: 60px;
 
 }
 
@@ -43,11 +43,14 @@
     width: 400px;
     height: 400px;
     margin: 35px;
+    box-shadow: 2px 2px 5px 1px rgba(129, 117, 117, 0.699);
 
 }
 
 .imagesHis {
     display: flex;
+    
+    
 }
 
 .favela3 {

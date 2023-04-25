@@ -39,6 +39,8 @@
     width: 400px;
     height: 400px;
     margin: 0 225px;
+    box-shadow: 2px 2px 5px 1px rgba(129, 117, 117, 0.699);
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 1300px) {
