@@ -39,6 +39,7 @@
     width: 400px;
     height: 400px;
     margin: 0 200px;
+    box-shadow: 2px 2px 5px 1px rgba(129, 117, 117, 0.699);
 }
 
 @media screen and (max-width: 1300px) {
@@ -51,19 +52,16 @@
         width: 80%;
         margin-top: 45px;
     }
-
-    .imageMiss img {
-        border-radius: 50%;
-        box-shadow: 2px 2px 5px 1px rgba(129, 117, 117, 0.699);
-    }
 }
 
-@media screen and (max-width: 900px){
-    .imageMiss img{
+@media screen and (max-width: 900px) {
+    .imageMiss img {
         flex-direction: column;
         margin: 0;
         width: 300px;
         height: 300px;
+        border-radius: 30PX;  
+        margin-top: 60px;
     }
-    
- }
+
+}
