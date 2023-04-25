@@ -7,6 +7,7 @@
     background-color: white;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .comun {
@@ -40,7 +41,6 @@
     height: 400px;
     margin: 0 225px;
     box-shadow: 2px 2px 5px 1px rgba(129, 117, 117, 0.699);
-    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -54,12 +54,15 @@
         margin-top: 45px;
     }
 }
-@media screen and (max-width: 900px){
-    .imgCom img{
+
+@media screen and (max-width: 900px) {
+    .imgCom img {
         flex-direction: column;
         margin: 0;
         width: 300px;
         height: 300px;
+        border-radius: 30PX;  
+        margin-top: 60px;
     }
-    
- }
+
+}

@@ -34,9 +34,11 @@
     width: 400px;
     height: 400px;
     margin: 35px;
+    box-shadow: 2px 2px 5px 1px rgba(129, 117, 117, 0.699);
 
 }
-.imagesNot{
+
+.imagesNot {
     display: flex;
 }
 
@@ -46,34 +48,42 @@
     font-size: 70PX;
     margin: 0 0 0 20px;
 }
-.favela6{
+
+.favela6 {
     margin-top: -20 px;
 }
-.favela7{
+
+.favela7 {
     margin-top: 20px;
 }
+
 @media screen and (max-width: 1300px) {
-    .noticias{
+    .noticias {
         display: flex;
         flex-direction: column;
     }
-    .notic{
+
+    .notic {
         width: 80%;
         margin-top: 45px;
     }
-    .imagesNot img{
+
+    .imagesNot img {
         border-radius: 30px
     }
-   }
-   @media screen and (max-width: 900px){
-    .imagesNot{
+}
+
+@media screen and (max-width: 900px) {
+    .imagesNot {
         flex-direction: column;
     }
-    .imagesNot img{
+
+    .imagesNot img {
         margin: 0;
         width: 300px;
         height: 300px;
+        border-radius: 30PX;
+        margin-top: 60px;
     }
-    
- }
 
+}
