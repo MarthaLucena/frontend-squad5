@@ -44,9 +44,9 @@ function Navbar() {
 					<li>
 						<Link to ="/doe"><button className="doarBtn">DOAR AGORA</button></Link>
 					</li>
-				      {logado ? <Link to="/login"><li className="logado">{Object.keys(infoUsuario).length === 0 ? infoAdmin.username : infoUsuario.username} </li></Link> : <Link to="/login"><li className="logado">Login</li></Link> }
+				      {logado ? <Link to="/login" target="blank"><li className="logado">{Object.keys(infoUsuario).length === 0 ? infoAdmin.username : infoUsuario.username} </li></Link> : <Link to="/login"><li className="logado">Login</li></Link> }
 					
-				      {logado ? <Link to="/login"><li className="logado" onClick={handleDeslogar}>Sair </li></Link> : <Link to="/Cadastro"><li className="logado">Cadastre-se </li></Link> }
+				      {logado ? <Link to="/login" target="blank"><li className="logado" onClick={handleDeslogar}>Sair </li></Link> : <Link to="/Cadastro"><li className="logado">Cadastre-se </li></Link> }
 					
 				</ul>
 				<button
