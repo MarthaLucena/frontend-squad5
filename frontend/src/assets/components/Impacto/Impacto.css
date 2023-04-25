@@ -38,4 +38,25 @@
     margin: 0 250px;
 
 }
-
+@media screen and (max-width: 1300px) {
+    .impacto{
+        display: flex;
+        flex-direction: column;
+    }
+    .impac{
+        width: 80%;
+        margin-top: 45px;
+    }
+    .imgImp img{
+        border-radius: 15PX;
+    }
+   }
+   @media screen and (max-width: 900px){
+    .imgImp img{
+        flex-direction: column;
+        margin: 0;
+        width: 300px;
+        height: 300px;
+    }
+    
+ }

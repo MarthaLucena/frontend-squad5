@@ -1,13 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.comunidades{
+.comunidades {
     background-color: white;
     display: flex;
     align-items: center;
 }
+
 .comun {
     padding: 15px;
     background-color: whitesmoke;
@@ -27,14 +28,36 @@
     color: gray;
     margin: 0 0 0 30px;
 }
-.iconC{
+
+.iconC {
     color: goldenrod;
     font-size: 70px;
     margin: 0 0 0 20px;
 }
-.imgCom img{
+
+.imgCom img {
     width: 400px;
     height: 400px;
     margin: 0 225px;
 }
 
+@media screen and (max-width: 1300px) {
+    .comunidades {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .comun {
+        width: 80%;
+        margin-top: 45px;
+    }
+}
+@media screen and (max-width: 900px){
+    .imgCom img{
+        flex-direction: column;
+        margin: 0;
+        width: 300px;
+        height: 300px;
+    }
+    
+ }

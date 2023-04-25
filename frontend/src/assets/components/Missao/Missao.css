@@ -27,7 +27,7 @@
     background-color: white;
     display: flex;
     align-items: center;
- }
+}
 
 .iconM {
     color: goldenrod;
@@ -35,8 +35,34 @@
     margin: 0 0 0 20px;
 }
 
-.imageMiss img{
+.imageMiss img {
     width: 400px;
     height: 400px;
     margin: 0 200px;
 }
+
+@media screen and (max-width: 1300px) {
+    .missao {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .miss {
+        width: 80%;
+        margin-top: 45px;
+    }
+
+    .imageMiss img {
+        border-radius: 50%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .imageMiss img{
+        flex-direction: column;
+        margin: 0;
+        width: 300px;
+        height: 300px;
+    }
+    
+ }
