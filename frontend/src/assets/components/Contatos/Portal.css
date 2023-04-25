@@ -1,13 +1,15 @@
+.container {
+  margin-top: 5%;
+}
+
 .titulo-form {
   text-align: center;
-  padding-bottom: 50px;
 }
 
 .titulo-form h1 {
-  font-size:1.7rem;
+  font-size:1.8rem;
 }
 .box-form {
-  background-color: #0099ff;
   border-radius: 5px;
   padding: 20px;
   display: flex;
@@ -17,6 +19,9 @@
 
 .box-outros {
   padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .box-outros > ul {
@@ -26,10 +31,13 @@
 }
 
 .form {
-  background-color: #ffffff86;
+  background-color:  #f0f0f0;
   padding: 20px;
   width: 400px;
   border-radius: 5px
+}
+.subtitulo-form h2 {
+  font-size: 1.5rem;
 }
 
 .form > .form-box {
@@ -64,6 +72,9 @@ textarea {
   padding: 5px;
 }
 
+.icon {
+  font-size: 150%;
+}
 .button-form > button {
   background-color: #efc900;
   padding: 5px;
@@ -83,6 +94,7 @@ textarea {
   .titulo-form {
     width: auto;
   }
+
   .box-form {
     width: auto;
     text-align: center;

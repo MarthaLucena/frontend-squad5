@@ -24,13 +24,12 @@ export default function Central() {
           </address>
           <address>Riachuelo, nº 34, 21999-999</address>
 
-          <h2>Horário comercial</h2>
+          <h2>Horário de funcionamento</h2>
           <address>
-            <FaClock /> Seg - Sex .... 10 hr até 20 hr
+            <FaClock /> Seg - Sex: 10h às 20h
           </address>
-          <address>Sab - Dom .... Fechado</address>
+          <address><FaClock /> Sab - Dom:  Fechado</address>
         </div>
-        <div className="linha_vertical"></div>
         <div className="linha"></div>
         <div className="box">
           <h2>Contatos</h2>

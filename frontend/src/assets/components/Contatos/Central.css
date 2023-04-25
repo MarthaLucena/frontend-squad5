@@ -1,6 +1,5 @@
 .titulo-central {
   text-align: center;
-  padding-bottom: 50px;
 }
 
 .linha_horizontal {
@@ -9,19 +8,29 @@
   margin: auto;
 }
 
+.linha {
+    border-right: solid rgb(8, 8, 8);
+    border-width: 0.5px;
+    height: 400px;
+    margin: 10px;
+}
+
+.titulo-central h1 {
+  font-size: 1.8rem;
+}
+
+.box-central h2 {
+  font-size: 1.6rem;
+}
+
 .box-central {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #cdcece;
+  background-color:  #f0f0f0;
   padding: 30px;
   width: 800px;
   margin: 20px;
-}
-
-.linha_vertical {
-  height: 350px;
-  border-right: 1px solid #000000;
 }
 
 .box > address {
