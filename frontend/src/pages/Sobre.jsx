@@ -1,4 +1,4 @@
-import Banner from "../assets/components/Banner/Banner"
+
 import Comunidades from "../assets/components/Comunidades/Comunidades"
 import Footer from "../assets/components/Footer/Footer"
 import Historia from "../assets/components/Historia/Historia"
@@ -24,12 +24,22 @@ function Sobre () {
     return(
         <div>
             <Navbar />
+<<<<<<< HEAD
             <Historia data={sobre} />
             <Missao data={sobre} />
             <Noticias data={sobre}/>
             <Impacto data={sobre}/>
             <Projetos data={sobre}/>
             <Comunidades data={sobre}/>
+=======
+
+            <Historia />
+            <Missao />
+            <Noticias />
+            <Impacto />
+            <Projetos />
+            <Comunidades />
+>>>>>>> 96830e768cf92b0627b7f8e127f5bcce8d5e009a
             <Footer />
 
         </div>

@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
 }
 
@@ -30,6 +29,7 @@
     background-color: white;
     display: flex;
     align-items: center;
+    margin-top: 60px;
 
 }
 
@@ -44,35 +44,47 @@
     width: 400px;
     height: 400px;
     margin: 35px;
+    box-shadow: 2px 2px 5px 1px rgba(129, 117, 117, 0.699);
 
 }
 
 .imagesHis {
     display: flex;
+
+
 }
 
 .favela3 {
     margin-top: 30px;
 }
-@media screen and (max-width: 1300px){
-    .quemsomos{
+
+@media screen and (max-width: 1300px) {
+    .quemsomos {
         display: flex;
         flex-direction: column;
     }
-    .quem{
+
+    .quem {
         width: 80%;
         margin-top: 45px;
     }
- }
- @media screen and (max-width: 900px){
-    .imagesHis{
+}
+
+@media screen and (max-width: 900px) {
+    .imagesHis {
         flex-direction: column;
     }
-    .imagesHis img{
+
+    .imagesHis img {
         margin: 0;
         width: 300px;
         height: 300px;
+        border-radius: 30PX;
+        margin-top: 60px;
     }
-    
- }
 
+    .quemsomos {
+        width: 100%;
+    }
+
+}
