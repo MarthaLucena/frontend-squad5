@@ -46,7 +46,7 @@ export default function Cards() {
       <div className="col">
         <div className="card h-100">
           <div className="img">
-            <img src={post.urlImg} className="card-img-top" />
+            <img src={post.urlImg} className="card-img-top img-fluid img-zoom" />
             <span className={`cardLabel ${getGeneroClass(post.genero)}`}>
               {post.genero}
             </span>
@@ -68,9 +68,9 @@ export default function Cards() {
   });
 
   return (
-    <section className="container">
-      <h2 className="cardGroupTitle">Por dentro do RIO</h2>
-      <div className="row -cols-1 rowrow-cols-md-3 g-4 d-flex justify-content-center">
+    <section className="container mt-5 mb-5">
+      <h2 className="cardGroupTitle">Outras notícias</h2>
+      <div className="row row-cols-1 row-cols-md-3 g-4 d-flex justify-content-center">
         {arr}
       </div>
     </section>

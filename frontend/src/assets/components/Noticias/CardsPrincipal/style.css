@@ -1,3 +1,7 @@
+.cont_principal{
+  margin-top: 150px;
+}
+
 .card_principal{
   width: 100%;
   display: inline-block;
@@ -16,4 +20,13 @@
 .card-text{
   text-decoration: none;
   color: #fff;
+}
+
+.img-zoom {
+  transition: transform 0.5s;
+}
+
+.img-zoom:hover {
+  transform: scale(1.2);
+  z-index: 9999;
 }
